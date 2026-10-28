@@ -8,6 +8,11 @@
       "symbols": 4
     },
     {
+      "path": "android/app/src/main/kotlin/casa/leo/cancha/data/RecentStore.kt",
+      "reference": "modules/android/app/src/main/kotlin/casa/leo/cancha/data/RecentStore.kt.md",
+      "symbols": 9
+    },
+    {
       "path": "android/app/src/main/kotlin/casa/leo/cancha/net/Api.kt",
       "reference": "modules/android/app/src/main/kotlin/casa/leo/cancha/net/Api.kt.md",
       "symbols": 11
@@ -103,6 +108,11 @@
       "symbols": 3
     },
     {
+      "path": "tools/public_preview.py",
+      "reference": "modules/tools/public_preview.py.md",
+      "symbols": 5
+    },
+    {
       "path": "tools/runtime-env.py",
       "reference": "modules/tools/runtime-env.py.md",
       "symbols": 6
@@ -155,6 +165,109 @@
       "kind": "Kotlin function",
       "line": 141,
       "parameters": [],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/data/RecentStore.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/data/RecentStore.kt",
+      "name": "lastUpdatePrompt",
+      "kind": "Kotlin function",
+      "line": 15,
+      "parameters": [
+        "context"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/data/RecentStore.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/data/RecentStore.kt",
+      "name": "setUpdatePrompted",
+      "kind": "Kotlin function",
+      "line": 18,
+      "parameters": [
+        "context",
+        "code"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/data/RecentStore.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/data/RecentStore.kt",
+      "name": "favIds",
+      "kind": "Kotlin function",
+      "line": 23,
+      "parameters": [
+        "context"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/data/RecentStore.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/data/RecentStore.kt",
+      "name": "isFav",
+      "kind": "Kotlin function",
+      "line": 28,
+      "parameters": [
+        "context",
+        "id"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/data/RecentStore.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/data/RecentStore.kt",
+      "name": "toggleFav",
+      "kind": "Kotlin function",
+      "line": 31,
+      "parameters": [
+        "context",
+        "id"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/data/RecentStore.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/data/RecentStore.kt",
+      "name": "add",
+      "kind": "Kotlin function",
+      "line": 40,
+      "parameters": [
+        "context",
+        "id"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/data/RecentStore.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/data/RecentStore.kt",
+      "name": "ids",
+      "kind": "Kotlin function",
+      "line": 55,
+      "parameters": [
+        "context"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/data/RecentStore.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/data/RecentStore.kt",
+      "name": "countsMap",
+      "kind": "Kotlin function",
+      "line": 60,
+      "parameters": [
+        "context"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/data/RecentStore.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/data/RecentStore.kt",
+      "name": "mostWatched",
+      "kind": "Kotlin function",
+      "line": 68,
+      "parameters": [
+        "context"
+      ],
       "summary": ""
     },
     {
@@ -2024,7 +2137,7 @@
       "source_path": "tools/first-signal.py",
       "name": "main",
       "kind": "function",
-      "line": 132,
+      "line": 136,
       "parameters": [],
       "summary": ""
     },
@@ -2080,7 +2193,7 @@
       "source_path": "tools/first-signal.py",
       "name": "buffered",
       "kind": "function",
-      "line": 80,
+      "line": 84,
       "parameters": [],
       "summary": ""
     },
@@ -2089,7 +2202,7 @@
       "source_path": "tools/first-signal.py",
       "name": "route",
       "kind": "function",
-      "line": 102,
+      "line": 106,
       "parameters": [
         "r"
       ],
@@ -2125,6 +2238,65 @@
       "kind": "function",
       "line": 33,
       "parameters": [],
+      "summary": ""
+    },
+    {
+      "module": "tools/public_preview.py",
+      "source_path": "tools/public_preview.py",
+      "name": "PublicPreview",
+      "kind": "class",
+      "line": 11,
+      "parameters": [],
+      "summary": ""
+    },
+    {
+      "module": "tools/public_preview.py",
+      "source_path": "tools/public_preview.py",
+      "name": "__init__",
+      "kind": "function",
+      "line": 12,
+      "parameters": [
+        "self",
+        "app",
+        "prefix"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "tools/public_preview.py",
+      "source_path": "tools/public_preview.py",
+      "name": "__call__",
+      "kind": "function",
+      "line": 16,
+      "parameters": [
+        "self",
+        "scope",
+        "receive",
+        "send"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "tools/public_preview.py",
+      "source_path": "tools/public_preview.py",
+      "name": "reject",
+      "kind": "function",
+      "line": 56,
+      "parameters": [
+        "send",
+        "status"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "tools/public_preview.py",
+      "source_path": "tools/public_preview.py",
+      "name": "rewrite",
+      "kind": "function",
+      "line": 30,
+      "parameters": [
+        "message"
+      ],
       "summary": ""
     },
     {

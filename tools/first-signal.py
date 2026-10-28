@@ -41,9 +41,9 @@ def wait_for(check, *, deadline=60):
         time.sleep(0.1)
     raise RuntimeError('The local signal did not reach its readiness barrier.')
 
-def serve_and_prove(runtime, *, serve=False, capture=None):
+def serve_and_prove(runtime, *, serve=False, capture=None, port=0, prefix=''):
     import functools
-    sock=socket.socket();sock.bind(('127.0.0.1',0));port=sock.getsockname()[1]
+    sock=socket.socket();sock.setsockopt(socket.SOL_SOCKET,socket.SO_REUSEADDR,1);sock.bind(('127.0.0.1',port));port=sock.getsockname()[1]
     media_server=http.server.ThreadingHTTPServer(('127.0.0.1',0),functools.partial(QuietMediaHandler,directory=str(runtime/'media')))
     media_thread=threading.Thread(target=media_server.serve_forever,daemon=True);media_thread.start()
     feed='http://127.0.0.1:'+str(media_server.server_port)
@@ -70,8 +70,12 @@ def serve_and_prove(runtime, *, serve=False, capture=None):
     socket.socket.connect=checked_connect;socket.getaddrinfo=checked_dns
     import uvicorn
     from server import main
-    server=uvicorn.Server(uvicorn.Config(main.app,host='127.0.0.1',port=port,log_level='error',loop='asyncio',access_log=False))
-    thread=threading.Thread(target=lambda:server.run(sockets=[sock]),daemon=True);thread.start();base='http://127.0.0.1:'+str(port)
+    app=main.app
+    if prefix:
+        from tools.public_preview import PublicPreview
+        app=PublicPreview(app,prefix)
+    server=uvicorn.Server(uvicorn.Config(app,host='127.0.0.1',port=port,log_level='error',loop='asyncio',access_log=False))
+    thread=threading.Thread(target=lambda:server.run(sockets=[sock]),daemon=True);thread.start();base='http://127.0.0.1:'+str(port)+prefix
     try:
         status=wait_for(lambda:get(base+'/v1/status',json_data=True))
         assert feed not in json.dumps(status)
@@ -130,8 +134,8 @@ def serve_and_prove(runtime, *, serve=False, capture=None):
         socket.socket.connect=original_connect;socket.getaddrinfo=original_dns
 
 def main():
-    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--serve',action='store_true');parser.add_argument('--capture');args=parser.parse_args()
+    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--serve',action='store_true');parser.add_argument('--capture');parser.add_argument('--port',type=int,default=0);parser.add_argument('--prefix',default='');args=parser.parse_args()
     if not shutil.which('ffmpeg') or not shutil.which('ffprobe'):raise SystemExit('Install FFmpeg and FFprobe to generate and inspect the local signal.')
-    runtime=private_runtime();make_signal(runtime/'media');serve_and_prove(runtime,serve=args.serve,capture=args.capture)
+    runtime=private_runtime();make_signal(runtime/'media');serve_and_prove(runtime,serve=args.serve,capture=args.capture,port=args.port,prefix=args.prefix)
 
 if __name__=='__main__':main()

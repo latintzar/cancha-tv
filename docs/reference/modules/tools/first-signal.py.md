@@ -10,10 +10,10 @@
 | `get` | [L30](../../../../tools/first-signal.py#L30) | url |
 | `wait_for` | [L34](../../../../tools/first-signal.py#L34) | check |
 | `serve_and_prove` | [L44](../../../../tools/first-signal.py#L44) | runtime |
-| `main` | [L132](../../../../tools/first-signal.py#L132) |  |
+| `main` | [L136](../../../../tools/first-signal.py#L136) |  |
 | `log_message` | [L25](../../../../tools/first-signal.py#L25) | self |
 | `copyfile` | [L26](../../../../tools/first-signal.py#L26) | self, source, outputfile |
 | `checked_connect` | [L61](../../../../tools/first-signal.py#L61) | connection, address |
 | `checked_dns` | [L66](../../../../tools/first-signal.py#L66) | host |
-| `buffered` | [L80](../../../../tools/first-signal.py#L80) |  |
-| `route` | [L102](../../../../tools/first-signal.py#L102) | r |
+| `buffered` | [L84](../../../../tools/first-signal.py#L84) |  |
+| `route` | [L106](../../../../tools/first-signal.py#L106) | r |

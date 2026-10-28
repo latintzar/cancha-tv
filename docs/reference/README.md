@@ -7,6 +7,7 @@ Python is indexed with AST; Kotlin function navigation uses source declarations.
 | Module | Symbols |
 |---|---:|
 | [android/app/src/main/kotlin/casa/leo/cancha/MainActivity.kt](modules/android/app/src/main/kotlin/casa/leo/cancha/MainActivity.kt.md) | 4 |
+| [android/app/src/main/kotlin/casa/leo/cancha/data/RecentStore.kt](modules/android/app/src/main/kotlin/casa/leo/cancha/data/RecentStore.kt.md) | 9 |
 | [android/app/src/main/kotlin/casa/leo/cancha/net/Api.kt](modules/android/app/src/main/kotlin/casa/leo/cancha/net/Api.kt.md) | 11 |
 | [android/app/src/main/kotlin/casa/leo/cancha/net/Models.kt](modules/android/app/src/main/kotlin/casa/leo/cancha/net/Models.kt.md) | 0 |
 | [android/app/src/main/kotlin/casa/leo/cancha/player/PlayerHolder.kt](modules/android/app/src/main/kotlin/casa/leo/cancha/player/PlayerHolder.kt.md) | 10 |
@@ -26,5 +27,6 @@ Python is indexed with AST; Kotlin function navigation uses source declarations.
 | [server/youtube.py](modules/server/youtube.py.md) | 5 |
 | [tools/first-signal.py](modules/tools/first-signal.py.md) | 13 |
 | [tools/link-gate.py](modules/tools/link-gate.py.md) | 3 |
+| [tools/public_preview.py](modules/tools/public_preview.py.md) | 5 |
 | [tools/runtime-env.py](modules/tools/runtime-env.py.md) | 6 |
 | [tools/source-reference.py](modules/tools/source-reference.py.md) | 1 |

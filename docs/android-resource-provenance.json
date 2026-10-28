@@ -1,0 +1,53 @@
+{
+  "origin": "Original retained Cancha Android resource directory; recovered unchanged",
+  "files": [
+    {
+      "path": "android/app/src/main/res/drawable/cancha_wordmark.png",
+      "sha256": "0400e08eb24d88614aca329fc14438ec8b9c3f79806744647d2b3ecfbc6b2d1a"
+    },
+    {
+      "path": "android/app/src/main/res/drawable/tv_banner.png",
+      "sha256": "c422a26ad008aeb33222d9d8134bcb9b1408ffa94abb014684338c8e12fef811"
+    },
+    {
+      "path": "android/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+      "sha256": "8ecc74a8613b2dbf367ada329025166a0fef3e5d7637ebd7717fa9930e4ee686"
+    },
+    {
+      "path": "android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png",
+      "sha256": "8ecc74a8613b2dbf367ada329025166a0fef3e5d7637ebd7717fa9930e4ee686"
+    },
+    {
+      "path": "android/app/src/main/res/mipmap-mdpi/ic_launcher.png",
+      "sha256": "1a2b2506cd83f1f0d4718b06eca256f8fbfad7fb461d7947d33dd83f832b70a9"
+    },
+    {
+      "path": "android/app/src/main/res/mipmap-mdpi/ic_launcher_round.png",
+      "sha256": "1a2b2506cd83f1f0d4718b06eca256f8fbfad7fb461d7947d33dd83f832b70a9"
+    },
+    {
+      "path": "android/app/src/main/res/mipmap-xhdpi/ic_launcher.png",
+      "sha256": "4b9a3837214f4c917fb27a83e0427d17987193a3c82e1652694eba2e50198a05"
+    },
+    {
+      "path": "android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png",
+      "sha256": "4b9a3837214f4c917fb27a83e0427d17987193a3c82e1652694eba2e50198a05"
+    },
+    {
+      "path": "android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png",
+      "sha256": "d7c067cbf5a1d57e604df4bbe02403e5ad34172487a5032125d7bfefc39ae9b5"
+    },
+    {
+      "path": "android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png",
+      "sha256": "d7c067cbf5a1d57e604df4bbe02403e5ad34172487a5032125d7bfefc39ae9b5"
+    },
+    {
+      "path": "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+      "sha256": "eeb446f975ef9a9ed7845215eb8907ee9f56112557e8e8009749ecce48e8141b"
+    },
+    {
+      "path": "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png",
+      "sha256": "eeb446f975ef9a9ed7845215eb8907ee9f56112557e8e8009749ecce48e8141b"
+    }
+  ]
+}

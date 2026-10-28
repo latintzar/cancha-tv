@@ -1,6 +1,6 @@
-# Cancha — TV streaming and DVR
+# Cancha
 
-Cancha is a personal channel guide and player. Supply your HLS sources and channel metadata; it probes mirrors, selects a healthy feed and keeps a rolling buffer for playback and rewind. The web player and native Android TV app use the same backend.
+Cancha is a TV streaming and DVR app with a personal channel guide and player. Supply your HLS sources and channel metadata; it probes mirrors, selects a healthy feed and keeps a rolling buffer for playback and rewind. The web player and native Android TV app use the same backend.
 
 ![Cancha’s original channel guide with authored local signals](docs/assets/cancha-browse-desktop.png)
 

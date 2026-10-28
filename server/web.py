@@ -1295,7 +1295,7 @@ const COUNTRY_LABEL = {
 // Rounded flag SVGs served by the backend (reliable on TV; emoji flags render as tofu)
 const COUNTRY_FLAG_CC = {
   MX: 'mx', PE: 'pe', CO: 'co', AR: 'ar', ES: 'es',
-  FR: 'fr', SN: 'sn', CI: 'ci', DE: 'de', GB: 'gb', US: 'us', AFR: 'afr',
+  FR: 'fr', SN: 'sn', CI: 'ci', DE: 'de', GB: 'gb', US: 'us',
 };
 const COUNTRY_ORDER = ['MX', 'PE', 'CO', 'AR', 'ES', 'FR', 'SN', 'CI', 'DE', 'GB', 'US', 'AFR'];
 
@@ -1546,6 +1546,7 @@ function byPopularity(a, b) {
 }
 
 const RAIL_ICON = {
+  AFR: '🌍',
   fav: '<svg class="rail-ico" viewBox="0 0 24 24" fill="#ff3b5c" stroke="#ff3b5c" stroke-width="1.5"><path d="M12 21s-7.5-4.7-10-9.3C.6 9 1.6 5.5 4.8 4.7 6.9 4.2 9 5.2 12 8c3-2.8 5.1-3.8 7.2-3.3 3.2.8 4.2 4.3 2.8 7C19.5 16.3 12 21 12 21z"/></svg>',
   recent: '<svg class="rail-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
   most: '<svg class="rail-ico" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.6 5.6 6 .7-4.4 4 1.2 6L12 16.9 6.6 19.3l1.2-6-4.4-4 6-.7z"/></svg>',
@@ -1621,7 +1622,7 @@ function buildCatMenu() {
   const items = [
     { f: 'home', label: 'Inicio', ico: '<svg class="cat-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>' },
     ...typesPresent().map(t => ({ f: 'type:' + t, label: t, ico: TYPE_ICO })),
-    ...COUNTRY_ORDER.map(cc => ({ f: cc, label: COUNTRY_LABEL[cc], flag: COUNTRY_FLAG_CC[cc] })),
+    ...COUNTRY_ORDER.map(cc => ({ f: cc, label: COUNTRY_LABEL[cc], flag: COUNTRY_FLAG_CC[cc], ico: cc === 'AFR' ? '🌍' : '' })),
   ];
   grid.innerHTML = items.map((it, i) =>
     '<button class="cat-item" data-filter="' + it.f + '" style="animation-delay:' + (i * 22) + 'ms">' +

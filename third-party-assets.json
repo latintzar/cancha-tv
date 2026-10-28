@@ -1,0 +1,99 @@
+{
+  "verified_date": "2026-10-28",
+  "assets": [
+    {
+      "path": "server/vendor/hls.min.js",
+      "project": "hls.js",
+      "version": "1.7.4",
+      "license": "Apache-2.0",
+      "registry_integrity": "sha512-3GlxGdPvT2YHvQYOt+yOzT/DEior/qJVNIylHA77kgeoBTdQQqi70GwefNEUmHQeNGyjC8U62+bruqW/Tpm+tg==",
+      "source": "https://registry.npmjs.org/hls.js/-/hls.js-1.7.4.tgz",
+      "sha256": "cfc70cc9e9fc63d071919e087670abc760c8fd1bc889b88588026e4d22193bbe"
+    },
+    {
+      "path": "server/webfont/inter-OFL.txt",
+      "source": "https://raw.githubusercontent.com/rsms/inter/master/LICENSE.txt",
+      "sha256": "262481e844521b326f5ecd053e59b98c8b2da78c8ee1bdbb6e8174305e54935a",
+      "license": "OFL-1.1"
+    },
+    {
+      "path": "server/webfont/instrumentserif-OFL.txt",
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/instrumentserif/OFL.txt",
+      "sha256": "129ed7618959716959f2941fdd5b49e0ad6e6c1d78726761786a00253d865521",
+      "license": "OFL-1.1"
+    },
+    {
+      "path": "server/webfont/inter-600.woff2",
+      "sha256": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62",
+      "source": "Original tracked Cancha font asset",
+      "license": "OFL-1.1"
+    },
+    {
+      "path": "server/webfont/inter-700.woff2",
+      "sha256": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62",
+      "source": "Original tracked Cancha font asset",
+      "license": "OFL-1.1"
+    },
+    {
+      "path": "server/webfont/inter-400.woff2",
+      "sha256": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62",
+      "source": "Original tracked Cancha font asset",
+      "license": "OFL-1.1"
+    },
+    {
+      "path": "server/webfont/inter-500.woff2",
+      "sha256": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62",
+      "source": "Original tracked Cancha font asset",
+      "license": "OFL-1.1"
+    },
+    {
+      "path": "server/webfont/instrumentserif-400.woff2",
+      "sha256": "5eb09b5ac0e28b67c2f041c8ba6d244604ca0c0980d65912ab2d47fed84ddc31",
+      "source": "Original tracked Cancha font asset",
+      "license": "OFL-1.1"
+    },
+    {
+      "path": "server/webfont/instrumentserif-400-italic.woff2",
+      "sha256": "5a51946dfffa82972bc98745359c46761515641fda557c25116459a9f83da4a7",
+      "source": "Original tracked Cancha font asset",
+      "license": "OFL-1.1"
+    },
+    {
+      "path": "android/gradle/wrapper/gradle-wrapper.jar",
+      "version": "8.7",
+      "source": "https://services.gradle.org/distributions/gradle-8.7-wrapper.jar.sha256",
+      "sha256": "cb0da6751c2b753a16ac168bb354870ebb1e162e9083f116729cec9c781156b8",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "server/assets/flags/mx.svg",
+      "source": "https://raw.githubusercontent.com/lipis/flag-icons/v7.5.0/flags/4x3/mx.svg",
+      "sha256": "9dbc8ad8b35e52ce7cb686d5cd93bd95e4c0dd8505c184186a740148ffd34901",
+      "license": "MIT"
+    },
+    {
+      "path": "server/assets/flags/pe.svg",
+      "source": "https://raw.githubusercontent.com/lipis/flag-icons/v7.5.0/flags/4x3/pe.svg",
+      "sha256": "e9dd299d453d9c173203e60f69623ef2148dbee24b2a1763328e94d4dfece05f",
+      "license": "MIT"
+    },
+    {
+      "path": "server/assets/flags/co.svg",
+      "source": "https://raw.githubusercontent.com/lipis/flag-icons/v7.5.0/flags/4x3/co.svg",
+      "sha256": "6bab3c96c1657510c6e49354dd40203c69401bee54da497392ab9267334e5fd4",
+      "license": "MIT"
+    },
+    {
+      "path": "server/assets/flags/ar.svg",
+      "source": "https://raw.githubusercontent.com/lipis/flag-icons/v7.5.0/flags/4x3/ar.svg",
+      "sha256": "da39bfbe83fd35fae781f605c4a297b632f03ccf72d4cb0499e86dac8370663d",
+      "license": "MIT"
+    },
+    {
+      "path": "server/assets/flags/es.svg",
+      "source": "https://raw.githubusercontent.com/lipis/flag-icons/v7.5.0/flags/4x3/es.svg",
+      "sha256": "f9cfaff858e95f830733ade9591037b5322dfb5827a53b70956a3d190bb49b9a",
+      "license": "MIT"
+    }
+  ]
+}

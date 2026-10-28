@@ -1,0 +1,2206 @@
+{
+  "schema_version": 1,
+  "source_pin": "dbac69422281b857b9425ee01bb1876ddbdb7c2c",
+  "modules": [
+    {
+      "path": "android/app/src/main/kotlin/casa/leo/cancha/MainActivity.kt",
+      "reference": "modules/android/app/src/main/kotlin/casa/leo/cancha/MainActivity.kt.md",
+      "symbols": 4
+    },
+    {
+      "path": "android/app/src/main/kotlin/casa/leo/cancha/net/Api.kt",
+      "reference": "modules/android/app/src/main/kotlin/casa/leo/cancha/net/Api.kt.md",
+      "symbols": 11
+    },
+    {
+      "path": "android/app/src/main/kotlin/casa/leo/cancha/net/Models.kt",
+      "reference": "modules/android/app/src/main/kotlin/casa/leo/cancha/net/Models.kt.md",
+      "symbols": 0
+    },
+    {
+      "path": "android/app/src/main/kotlin/casa/leo/cancha/player/PlayerHolder.kt",
+      "reference": "modules/android/app/src/main/kotlin/casa/leo/cancha/player/PlayerHolder.kt.md",
+      "symbols": 10
+    },
+    {
+      "path": "android/app/src/main/kotlin/casa/leo/cancha/player/PlayerScreen.kt",
+      "reference": "modules/android/app/src/main/kotlin/casa/leo/cancha/player/PlayerScreen.kt.md",
+      "symbols": 9
+    },
+    {
+      "path": "android/app/src/main/kotlin/casa/leo/cancha/ui/CanchaTheme.kt",
+      "reference": "modules/android/app/src/main/kotlin/casa/leo/cancha/ui/CanchaTheme.kt.md",
+      "symbols": 2
+    },
+    {
+      "path": "android/app/src/main/kotlin/casa/leo/cancha/ui/HomeScreen.kt",
+      "reference": "modules/android/app/src/main/kotlin/casa/leo/cancha/ui/HomeScreen.kt.md",
+      "symbols": 17
+    },
+    {
+      "path": "android/app/src/main/kotlin/casa/leo/cancha/update/Updater.kt",
+      "reference": "modules/android/app/src/main/kotlin/casa/leo/cancha/update/Updater.kt.md",
+      "symbols": 5
+    },
+    {
+      "path": "server/__init__.py",
+      "reference": "modules/server/__init__.py.md",
+      "symbols": 0
+    },
+    {
+      "path": "server/catalog.py",
+      "reference": "modules/server/catalog.py.md",
+      "symbols": 1
+    },
+    {
+      "path": "server/dvr.py",
+      "reference": "modules/server/dvr.py.md",
+      "symbols": 30
+    },
+    {
+      "path": "server/main.py",
+      "reference": "modules/server/main.py.md",
+      "symbols": 29
+    },
+    {
+      "path": "server/models.py",
+      "reference": "modules/server/models.py.md",
+      "symbols": 9
+    },
+    {
+      "path": "server/prober.py",
+      "reference": "modules/server/prober.py.md",
+      "symbols": 15
+    },
+    {
+      "path": "server/proxy.py",
+      "reference": "modules/server/proxy.py.md",
+      "symbols": 8
+    },
+    {
+      "path": "server/tickets.py",
+      "reference": "modules/server/tickets.py.md",
+      "symbols": 6
+    },
+    {
+      "path": "server/web.py",
+      "reference": "modules/server/web.py.md",
+      "symbols": 0
+    },
+    {
+      "path": "server/youtube.py",
+      "reference": "modules/server/youtube.py.md",
+      "symbols": 5
+    },
+    {
+      "path": "tools/first-signal.py",
+      "reference": "modules/tools/first-signal.py.md",
+      "symbols": 13
+    },
+    {
+      "path": "tools/link-gate.py",
+      "reference": "modules/tools/link-gate.py.md",
+      "symbols": 3
+    },
+    {
+      "path": "tools/runtime-env.py",
+      "reference": "modules/tools/runtime-env.py.md",
+      "symbols": 6
+    },
+    {
+      "path": "tools/source-reference.py",
+      "reference": "modules/tools/source-reference.py.md",
+      "symbols": 1
+    }
+  ],
+  "symbols": [
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/MainActivity.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/MainActivity.kt",
+      "name": "onCreate",
+      "kind": "Kotlin function",
+      "line": 41,
+      "parameters": [
+        "savedInstanceState"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/MainActivity.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/MainActivity.kt",
+      "name": "tune",
+      "kind": "Kotlin function",
+      "line": 103,
+      "parameters": [
+        "i"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/MainActivity.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/MainActivity.kt",
+      "name": "onKeyDown",
+      "kind": "Kotlin function",
+      "line": 133,
+      "parameters": [
+        "keyCode",
+        "event"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/MainActivity.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/MainActivity.kt",
+      "name": "onDestroy",
+      "kind": "Kotlin function",
+      "line": 141,
+      "parameters": [],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/net/Api.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/net/Api.kt",
+      "name": "fetchStatus",
+      "kind": "Kotlin function",
+      "line": 25,
+      "parameters": [],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/net/Api.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/net/Api.kt",
+      "name": "swapMirror",
+      "kind": "Kotlin function",
+      "line": 33,
+      "parameters": [
+        "channelId"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/net/Api.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/net/Api.kt",
+      "name": "warm",
+      "kind": "Kotlin function",
+      "line": 39,
+      "parameters": [
+        "channelId"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/net/Api.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/net/Api.kt",
+      "name": "fetchLatestVersion",
+      "kind": "Kotlin function",
+      "line": 44,
+      "parameters": [],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/net/Api.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/net/Api.kt",
+      "name": "masterUrl",
+      "kind": "Kotlin function",
+      "line": 54,
+      "parameters": [
+        "channelId"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/net/Api.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/net/Api.kt",
+      "name": "dvrUrl",
+      "kind": "Kotlin function",
+      "line": 56,
+      "parameters": [
+        "channelId"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/net/Api.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/net/Api.kt",
+      "name": "apkUrl",
+      "kind": "Kotlin function",
+      "line": 57,
+      "parameters": [],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/net/Api.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/net/Api.kt",
+      "name": "flagUrl",
+      "kind": "Kotlin function",
+      "line": 58,
+      "parameters": [
+        "cc"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/net/Api.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/net/Api.kt",
+      "name": "logoUrl",
+      "kind": "Kotlin function",
+      "line": 59,
+      "parameters": [
+        "channelId"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/net/Api.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/net/Api.kt",
+      "name": "thumbUrl",
+      "kind": "Kotlin function",
+      "line": 60,
+      "parameters": [
+        "channelId"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/net/Api.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/net/Api.kt",
+      "name": "thumbUrl",
+      "kind": "Kotlin function",
+      "line": 62,
+      "parameters": [
+        "channelId",
+        "bucket"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/player/PlayerHolder.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/player/PlayerHolder.kt",
+      "name": "build",
+      "kind": "Kotlin function",
+      "line": 32,
+      "parameters": [
+        "context"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/player/PlayerHolder.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/player/PlayerHolder.kt",
+      "name": "obtain",
+      "kind": "Kotlin function",
+      "line": 56,
+      "parameters": [
+        "context"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/player/PlayerHolder.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/player/PlayerHolder.kt",
+      "name": "active",
+      "kind": "Kotlin function",
+      "line": 57,
+      "parameters": [],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/player/PlayerHolder.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/player/PlayerHolder.kt",
+      "name": "load",
+      "kind": "Kotlin function",
+      "line": 59,
+      "parameters": [
+        "p",
+        "channelId"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/player/PlayerHolder.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/player/PlayerHolder.kt",
+      "name": "preroll",
+      "kind": "Kotlin function",
+      "line": 73,
+      "parameters": [
+        "context",
+        "channelId"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/player/PlayerHolder.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/player/PlayerHolder.kt",
+      "name": "bufferSpare",
+      "kind": "Kotlin function",
+      "line": 83,
+      "parameters": [
+        "context",
+        "channelId"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/player/PlayerHolder.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/player/PlayerHolder.kt",
+      "name": "activate",
+      "kind": "Kotlin function",
+      "line": 94,
+      "parameters": [
+        "context",
+        "channelId"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/player/PlayerHolder.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/player/PlayerHolder.kt",
+      "name": "reload",
+      "kind": "Kotlin function",
+      "line": 122,
+      "parameters": [
+        "context",
+        "channelId"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/player/PlayerHolder.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/player/PlayerHolder.kt",
+      "name": "mute",
+      "kind": "Kotlin function",
+      "line": 130,
+      "parameters": [],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/player/PlayerHolder.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/player/PlayerHolder.kt",
+      "name": "release",
+      "kind": "Kotlin function",
+      "line": 132,
+      "parameters": [],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/player/PlayerScreen.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/player/PlayerScreen.kt",
+      "name": "PlayerScreen",
+      "kind": "Kotlin function",
+      "line": 71,
+      "parameters": [
+        "channel",
+        "navList",
+        "index",
+        "onClose"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/player/PlayerScreen.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/player/PlayerScreen.kt",
+      "name": "onIsPlayingChanged",
+      "kind": "Kotlin function",
+      "line": 105,
+      "parameters": [
+        "isPlaying"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/player/PlayerScreen.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/player/PlayerScreen.kt",
+      "name": "onPlayerError",
+      "kind": "Kotlin function",
+      "line": 107,
+      "parameters": [
+        "error"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/player/PlayerScreen.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/player/PlayerScreen.kt",
+      "name": "FilterChip",
+      "kind": "Kotlin function",
+      "line": 418,
+      "parameters": [
+        "label",
+        "selected",
+        "onClick"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/player/PlayerScreen.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/player/PlayerScreen.kt",
+      "name": "ChannelRow",
+      "kind": "Kotlin function",
+      "line": 437,
+      "parameters": [
+        "ch",
+        "isCurrent",
+        "onClick"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/player/PlayerScreen.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/player/PlayerScreen.kt",
+      "name": "LiveBadge",
+      "kind": "Kotlin function",
+      "line": 611,
+      "parameters": [
+        "behindLive",
+        "liveOffsetMs",
+        "onGoLive"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/player/PlayerScreen.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/player/PlayerScreen.kt",
+      "name": "YouTubeChannelScreen",
+      "kind": "Kotlin function",
+      "line": 632,
+      "parameters": [
+        "channel",
+        "n",
+        "index",
+        "onClose"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/player/PlayerScreen.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/player/PlayerScreen.kt",
+      "name": "CenterLabel",
+      "kind": "Kotlin function",
+      "line": 706,
+      "parameters": [
+        "ch"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/player/PlayerScreen.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/player/PlayerScreen.kt",
+      "name": "IconBtn",
+      "kind": "Kotlin function",
+      "line": 734,
+      "parameters": [
+        "icon",
+        "contentDescription",
+        "onClick"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/ui/CanchaTheme.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/ui/CanchaTheme.kt",
+      "name": "gradFor",
+      "kind": "Kotlin function",
+      "line": 45,
+      "parameters": [
+        "country"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/ui/CanchaTheme.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/ui/CanchaTheme.kt",
+      "name": "CanchaTheme",
+      "kind": "Kotlin function",
+      "line": 85,
+      "parameters": [
+        "content"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/ui/HomeScreen.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/ui/HomeScreen.kt",
+      "name": "countryLabelOf",
+      "kind": "Kotlin function",
+      "line": 69,
+      "parameters": [
+        "cc"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/ui/HomeScreen.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/ui/HomeScreen.kt",
+      "name": "tabsFor",
+      "kind": "Kotlin function",
+      "line": 89,
+      "parameters": [
+        "catalog"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/ui/HomeScreen.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/ui/HomeScreen.kt",
+      "name": "flagLoader",
+      "kind": "Kotlin function",
+      "line": 97,
+      "parameters": [
+        "context"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/ui/HomeScreen.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/ui/HomeScreen.kt",
+      "name": "FlagChip",
+      "kind": "Kotlin function",
+      "line": 103,
+      "parameters": [
+        "cc",
+        "width"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/ui/HomeScreen.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/ui/HomeScreen.kt",
+      "name": "liveFirst",
+      "kind": "Kotlin function",
+      "line": 115,
+      "parameters": [
+        "a",
+        "b"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/ui/HomeScreen.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/ui/HomeScreen.kt",
+      "name": "HomeScreen",
+      "kind": "Kotlin function",
+      "line": 119,
+      "parameters": [
+        "onChannelClick"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/ui/HomeScreen.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/ui/HomeScreen.kt",
+      "name": "HeaderRow",
+      "kind": "Kotlin function",
+      "line": 194,
+      "parameters": [
+        "onOpenSearch"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/ui/HomeScreen.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/ui/HomeScreen.kt",
+      "name": "SearchPill",
+      "kind": "Kotlin function",
+      "line": 209,
+      "parameters": [
+        "onClick"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/ui/HomeScreen.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/ui/HomeScreen.kt",
+      "name": "SearchOverlay",
+      "kind": "Kotlin function",
+      "line": 243,
+      "parameters": [
+        "catalog",
+        "query",
+        "onKey"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/ui/HomeScreen.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/ui/HomeScreen.kt",
+      "name": "KeyButton",
+      "kind": "Kotlin function",
+      "line": 304,
+      "parameters": [
+        "label",
+        "focusRequester",
+        "wide",
+        "onClick"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/ui/HomeScreen.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/ui/HomeScreen.kt",
+      "name": "TabRow",
+      "kind": "Kotlin function",
+      "line": 341,
+      "parameters": [
+        "tabs",
+        "selected",
+        "onSelect"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/ui/HomeScreen.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/ui/HomeScreen.kt",
+      "name": "CountryFilterRow",
+      "kind": "Kotlin function",
+      "line": 353,
+      "parameters": [
+        "ccs",
+        "selected",
+        "onSelect"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/ui/HomeScreen.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/ui/HomeScreen.kt",
+      "name": "TabChip",
+      "kind": "Kotlin function",
+      "line": 366,
+      "parameters": [
+        "label",
+        "flag",
+        "selected",
+        "onClick"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/ui/HomeScreen.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/ui/HomeScreen.kt",
+      "name": "LoadingState",
+      "kind": "Kotlin function",
+      "line": 402,
+      "parameters": [
+        "error"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/ui/HomeScreen.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/ui/HomeScreen.kt",
+      "name": "Content",
+      "kind": "Kotlin function",
+      "line": 412,
+      "parameters": [
+        "catalog",
+        "selectedTab",
+        "selectedCountry",
+        "favIds",
+        "recentIds",
+        "mostWatchedIds",
+        "onChannelClick"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/ui/HomeScreen.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/ui/HomeScreen.kt",
+      "name": "Rail",
+      "kind": "Kotlin function",
+      "line": 480,
+      "parameters": [
+        "title",
+        "channels",
+        "onClick"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/ui/HomeScreen.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/ui/HomeScreen.kt",
+      "name": "Tile",
+      "kind": "Kotlin function",
+      "line": 521,
+      "parameters": [
+        "ch",
+        "onClick"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/update/Updater.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/update/Updater.kt",
+      "name": "checkForUpdate",
+      "kind": "Kotlin function",
+      "line": 33,
+      "parameters": [],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/update/Updater.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/update/Updater.kt",
+      "name": "download",
+      "kind": "Kotlin function",
+      "line": 39,
+      "parameters": [
+        "context",
+        "url"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/update/Updater.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/update/Updater.kt",
+      "name": "canInstall",
+      "kind": "Kotlin function",
+      "line": 54,
+      "parameters": [
+        "context"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/update/Updater.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/update/Updater.kt",
+      "name": "requestInstallPermission",
+      "kind": "Kotlin function",
+      "line": 60,
+      "parameters": [
+        "context"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "android/app/src/main/kotlin/casa/leo/cancha/update/Updater.kt",
+      "source_path": "android/app/src/main/kotlin/casa/leo/cancha/update/Updater.kt",
+      "name": "install",
+      "kind": "Kotlin function",
+      "line": 73,
+      "parameters": [
+        "context",
+        "apk"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "server/catalog.py",
+      "source_path": "server/catalog.py",
+      "name": "load_catalog",
+      "kind": "function",
+      "line": 13,
+      "parameters": [
+        "path"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "server/dvr.py",
+      "source_path": "server/dvr.py",
+      "name": "Seg",
+      "kind": "class",
+      "line": 44,
+      "parameters": [],
+      "summary": ""
+    },
+    {
+      "module": "server/dvr.py",
+      "source_path": "server/dvr.py",
+      "name": "DvrChannel",
+      "kind": "class",
+      "line": 52,
+      "parameters": [],
+      "summary": ""
+    },
+    {
+      "module": "server/dvr.py",
+      "source_path": "server/dvr.py",
+      "name": "_parse_master",
+      "kind": "function",
+      "line": 72,
+      "parameters": [
+        "text"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "server/dvr.py",
+      "source_path": "server/dvr.py",
+      "name": "_parse_media",
+      "kind": "function",
+      "line": 90,
+      "parameters": [
+        "text"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "server/dvr.py",
+      "source_path": "server/dvr.py",
+      "name": "DvrManager",
+      "kind": "class",
+      "line": 129,
+      "parameters": [],
+      "summary": ""
+    },
+    {
+      "module": "server/dvr.py",
+      "source_path": "server/dvr.py",
+      "name": "total_duration",
+      "kind": "function",
+      "line": 68,
+      "parameters": [
+        "self"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "server/dvr.py",
+      "source_path": "server/dvr.py",
+      "name": "__init__",
+      "kind": "function",
+      "line": 130,
+      "parameters": [
+        "self",
+        "catalog",
+        "session_factory"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "server/dvr.py",
+      "source_path": "server/dvr.py",
+      "name": "close",
+      "kind": "function",
+      "line": 138,
+      "parameters": [
+        "self"
+      ],
+      "summary": "Stop recorders and their subprocesses before closing the app's sessions."
+    },
+    {
+      "module": "server/dvr.py",
+      "source_path": "server/dvr.py",
+      "name": "needs_transcode_cached",
+      "kind": "function",
+      "line": 147,
+      "parameters": [
+        "self",
+        "cid"
+      ],
+      "summary": "Sync, race-free: True if this channel must be transcoded for web playback.\nKnown set is authoritative; probe results are remembered after the first record."
+    },
+    {
+      "module": "server/dvr.py",
+      "source_path": "server/dvr.py",
+      "name": "start",
+      "kind": "function",
+      "line": 152,
+      "parameters": [
+        "self"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "server/dvr.py",
+      "source_path": "server/dvr.py",
+      "name": "_janitor",
+      "kind": "function",
+      "line": 156,
+      "parameters": [
+        "self"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "server/dvr.py",
+      "source_path": "server/dvr.py",
+      "name": "_stop",
+      "kind": "function",
+      "line": 164,
+      "parameters": [
+        "self",
+        "cid"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "server/dvr.py",
+      "source_path": "server/dvr.py",
+      "name": "touch",
+      "kind": "function",
+      "line": 180,
+      "parameters": [
+        "self",
+        "cid",
+        "play"
+      ],
+      "summary": "Mark a channel as wanted. play=True means actually tuned (may start a transcode);\nplay=False is a pre-warm (never burns an encode slot)."
+    },
+    {
+      "module": "server/dvr.py",
+      "source_path": "server/dvr.py",
+      "name": "_record",
+      "kind": "function",
+      "line": 202,
+      "parameters": [
+        "self",
+        "ch",
+        "dvr"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "server/dvr.py",
+      "source_path": "server/dvr.py",
+      "name": "_prune",
+      "kind": "function",
+      "line": 285,
+      "parameters": [
+        "self",
+        "dvr"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "server/dvr.py",
+      "source_path": "server/dvr.py",
+      "name": "_get",
+      "kind": "function",
+      "line": 294,
+      "parameters": [
+        "self",
+        "session",
+        "url",
+        "proxy",
+        "proxy_auth"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "server/dvr.py",
+      "source_path": "server/dvr.py",
+      "name": "_audio_codec_sync",
+      "kind": "function",
+      "line": 306,
+      "parameters": [
+        "data"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "server/dvr.py",
+      "source_path": "server/dvr.py",
+      "name": "_to_aac_sync",
+      "kind": "function",
+      "line": 318,
+      "parameters": [
+        "data"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "server/dvr.py",
+      "source_path": "server/dvr.py",
+      "name": "_audio_codec",
+      "kind": "function",
+      "line": 332,
+      "parameters": [
+        "self",
+        "data"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "server/dvr.py",
+      "source_path": "server/dvr.py",
+      "name": "_to_aac",
+      "kind": "function",
+      "line": 335,
+      "parameters": [
+        "self",
+        "data"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "server/dvr.py",
+      "source_path": "server/dvr.py",
+      "name": "_get_bytes",
+      "kind": "function",
+      "line": 338,
+      "parameters": [
+        "self",
+        "session",
+        "url",
+        "proxy",
+        "proxy_auth"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "server/dvr.py",
+      "source_path": "server/dvr.py",
+      "name": "_codecs_sync",
+      "kind": "function",
+      "line": 368,
+      "parameters": [
+        "data"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "server/dvr.py",
+      "source_path": "server/dvr.py",
+      "name": "_codecs",
+      "kind": "function",
+      "line": 387,
+      "parameters": [
+        "self",
+        "data"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "server/dvr.py",
+      "source_path": "server/dvr.py",
+      "name": "_needs_transcode",
+      "kind": "function",
+      "line": 390,
+      "parameters": [
+        "self",
+        "ch"
+      ],
+      "summary": "Fetch one segment and decide if the channel needs transcoding for web playback\n(MP2/AC3/aac_latm audio, or non-h264 video like HEVC). Cached after the first probe."
+    },
+    {
+      "module": "server/dvr.py",
+      "source_path": "server/dvr.py",
+      "name": "_ffmpeg_proxy_url",
+      "kind": "function",
+      "line": 424,
+      "parameters": [
+        "cc"
+      ],
+      "summary": "Webshare residential proxy URL (with embedded auth) for ffmpeg's http_proxy env."
+    },
+    {
+      "module": "server/dvr.py",
+      "source_path": "server/dvr.py",
+      "name": "_record_ffmpeg",
+      "kind": "function",
+      "line": 436,
+      "parameters": [
+        "self",
+        "ch",
+        "dvr"
+      ],
+      "summary": "Run a long-lived ffmpeg that ingests the live stream and writes continuous AAC HLS.\nffmpeg owns segmentation + timestamps, so segments splice cleanly in HLS.js."
+    },
+    {
+      "module": "server/dvr.py",
+      "source_path": "server/dvr.py",
+      "name": "_rewrite_ff",
+      "kind": "function",
+      "line": 545,
+      "parameters": [
+        "self",
+        "cid",
+        "text"
+      ],
+      "summary": "Point ffmpeg's segment lines at our /dvrseg/ endpoint."
+    },
+    {
+      "module": "server/dvr.py",
+      "source_path": "server/dvr.py",
+      "name": "playlist",
+      "kind": "function",
+      "line": 558,
+      "parameters": [
+        "self",
+        "cid"
+      ],
+      "summary": "Build a sliding-window media playlist over the ring buffer (live, seekable)."
+    },
+    {
+      "module": "server/dvr.py",
+      "source_path": "server/dvr.py",
+      "name": "seg_path",
+      "kind": "function",
+      "line": 588,
+      "parameters": [
+        "self",
+        "cid",
+        "filename"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "server/dvr.py",
+      "source_path": "server/dvr.py",
+      "name": "status",
+      "kind": "function",
+      "line": 598,
+      "parameters": [
+        "self",
+        "cid"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "server/main.py",
+      "source_path": "server/main.py",
+      "name": "_find_mirror",
+      "kind": "function",
+      "line": 55,
+      "parameters": [
+        "channel",
+        "mirror_id"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "server/main.py",
+      "source_path": "server/main.py",
+      "name": "lifespan",
+      "kind": "function",
+      "line": 60,
+      "parameters": [
+        "app"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "server/main.py",
+      "source_path": "server/main.py",
+      "name": "root_redirect",
+      "kind": "function",
+      "line": 118,
+      "parameters": [],
+      "summary": ""
+    },
+    {
+      "module": "server/main.py",
+      "source_path": "server/main.py",
+      "name": "watch_page",
+      "kind": "function",
+      "line": 123,
+      "parameters": [],
+      "summary": ""
+    },
+    {
+      "module": "server/main.py",
+      "source_path": "server/main.py",
+      "name": "yt_player",
+      "kind": "function",
+      "line": 128,
+      "parameters": [
+        "channel_id",
+        "name",
+        "muted"
+      ],
+      "summary": "On-demand YouTube channel player page (IFrame API, always-on rotation).\nLoaded by the web iframe and the native WebView. muted=1 for web (browser autoplay),\nmuted=0 for the TV app (sound on)."
+    },
+    {
+      "module": "server/main.py",
+      "source_path": "server/main.py",
+      "name": "api_root",
+      "kind": "function",
+      "line": 141,
+      "parameters": [],
+      "summary": ""
+    },
+    {
+      "module": "server/main.py",
+      "source_path": "server/main.py",
+      "name": "personalized_m3u",
+      "kind": "function",
+      "line": 162,
+      "parameters": [
+        "request"
+      ],
+      "summary": "Generate a flat M3U pointing every channel at our /master.m3u8 endpoint."
+    },
+    {
+      "module": "server/main.py",
+      "source_path": "server/main.py",
+      "name": "_upstream_get_text",
+      "kind": "function",
+      "line": 200,
+      "parameters": [
+        "url",
+        "proxy",
+        "proxy_auth"
+      ],
+      "summary": "Returns (body, final_url)."
+    },
+    {
+      "module": "server/main.py",
+      "source_path": "server/main.py",
+      "name": "channel_master",
+      "kind": "function",
+      "line": 215,
+      "parameters": [
+        "channel_id",
+        "request"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "server/main.py",
+      "source_path": "server/main.py",
+      "name": "channel_dvr",
+      "kind": "function",
+      "line": 267,
+      "parameters": [
+        "channel_id"
+      ],
+      "summary": "DVR playlist: a sliding 15-min window over the recorded ring buffer.\nStarts the recorder on first request (smart-dumping). Falls back to live master\nwhile the buffer is still filling so the user never sees an error."
+    },
+    {
+      "module": "server/main.py",
+      "source_path": "server/main.py",
+      "name": "channel_dvr_seg",
+      "kind": "function",
+      "line": 301,
+      "parameters": [
+        "channel_id",
+        "filename"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "server/main.py",
+      "source_path": "server/main.py",
+      "name": "channel_warm",
+      "kind": "function",
+      "line": 315,
+      "parameters": [
+        "channel_id"
+      ],
+      "summary": "Start recording a channel so it's instant when tuned. Called on hover/prewarm."
+    },
+    {
+      "module": "server/main.py",
+      "source_path": "server/main.py",
+      "name": "channel_dvr_status",
+      "kind": "function",
+      "line": 325,
+      "parameters": [
+        "channel_id"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "server/main.py",
+      "source_path": "server/main.py",
+      "name": "app_latest",
+      "kind": "function",
+      "line": 331,
+      "parameters": [],
+      "summary": "Self-update manifest for the sideloaded Android TV app."
+    },
+    {
+      "module": "server/main.py",
+      "source_path": "server/main.py",
+      "name": "variant_playlist",
+      "kind": "function",
+      "line": 343,
+      "parameters": [
+        "channel_id",
+        "mirror_id",
+        "b64url"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "server/main.py",
+      "source_path": "server/main.py",
+      "name": "segment_proxy",
+      "kind": "function",
+      "line": 368,
+      "parameters": [
+        "channel_id",
+        "mirror_id",
+        "b64url",
+        "request"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "server/main.py",
+      "source_path": "server/main.py",
+      "name": "swap_mirror",
+      "kind": "function",
+      "line": 409,
+      "parameters": [
+        "channel_id",
+        "from_"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "server/main.py",
+      "source_path": "server/main.py",
+      "name": "status",
+      "kind": "function",
+      "line": 428,
+      "parameters": [
+        "response"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "server/main.py",
+      "source_path": "server/main.py",
+      "name": "version",
+      "kind": "function",
+      "line": 467,
+      "parameters": [],
+      "summary": ""
+    },
+    {
+      "module": "server/main.py",
+      "source_path": "server/main.py",
+      "name": "apk_latest",
+      "kind": "function",
+      "line": 472,
+      "parameters": [],
+      "summary": ""
+    },
+    {
+      "module": "server/main.py",
+      "source_path": "server/main.py",
+      "name": "brand_asset",
+      "kind": "function",
+      "line": 489,
+      "parameters": [
+        "name"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "server/main.py",
+      "source_path": "server/main.py",
+      "name": "channel_logo",
+      "kind": "function",
+      "line": 510,
+      "parameters": [
+        "channel_id"
+      ],
+      "summary": "Serve channel logo from the local catalog/logos/ directory.\nFalls back to a 1x1 transparent PNG so the client never sees a 404 noise."
+    },
+    {
+      "module": "server/main.py",
+      "source_path": "server/main.py",
+      "name": "webfont",
+      "kind": "function",
+      "line": 536,
+      "parameters": [
+        "name"
+      ],
+      "summary": "Self-hosted woff2 fonts \u2014 no external Google Fonts round-trip \u2192 no FOUC."
+    },
+    {
+      "module": "server/main.py",
+      "source_path": "server/main.py",
+      "name": "country_flag",
+      "kind": "function",
+      "line": 550,
+      "parameters": [
+        "code"
+      ],
+      "summary": "Rounded country/region flag SVGs (locale icons). Reliable on TV unlike emoji flags."
+    },
+    {
+      "module": "server/main.py",
+      "source_path": "server/main.py",
+      "name": "favicon",
+      "kind": "function",
+      "line": 565,
+      "parameters": [],
+      "summary": ""
+    },
+    {
+      "module": "server/main.py",
+      "source_path": "server/main.py",
+      "name": "channel_thumb",
+      "kind": "function",
+      "line": 571,
+      "parameters": [
+        "channel_id"
+      ],
+      "summary": "Serve the latest live thumbnail (captured by thumb_loop every 10 min). 404 until captured."
+    },
+    {
+      "module": "server/main.py",
+      "source_path": "server/main.py",
+      "name": "hls_vendor",
+      "kind": "function",
+      "line": 597,
+      "parameters": [],
+      "summary": ""
+    },
+    {
+      "module": "server/main.py",
+      "source_path": "server/main.py",
+      "name": "_dvr_session",
+      "kind": "function",
+      "line": 85,
+      "parameters": [],
+      "summary": ""
+    },
+    {
+      "module": "server/main.py",
+      "source_path": "server/main.py",
+      "name": "stream",
+      "kind": "function",
+      "line": 394,
+      "parameters": [],
+      "summary": ""
+    },
+    {
+      "module": "server/models.py",
+      "source_path": "server/models.py",
+      "name": "Mirror",
+      "kind": "class",
+      "line": 8,
+      "parameters": [],
+      "summary": ""
+    },
+    {
+      "module": "server/models.py",
+      "source_path": "server/models.py",
+      "name": "Channel",
+      "kind": "class",
+      "line": 34,
+      "parameters": [],
+      "summary": ""
+    },
+    {
+      "module": "server/models.py",
+      "source_path": "server/models.py",
+      "name": "Catalog",
+      "kind": "class",
+      "line": 69,
+      "parameters": [],
+      "summary": ""
+    },
+    {
+      "module": "server/models.py",
+      "source_path": "server/models.py",
+      "name": "mirror_id",
+      "kind": "function",
+      "line": 27,
+      "parameters": [
+        "self"
+      ],
+      "summary": "Stable short id from url."
+    },
+    {
+      "module": "server/models.py",
+      "source_path": "server/models.py",
+      "name": "healthy_mirrors",
+      "kind": "function",
+      "line": 47,
+      "parameters": [
+        "self",
+        "now"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "server/models.py",
+      "source_path": "server/models.py",
+      "name": "best_mirror",
+      "kind": "function",
+      "line": 50,
+      "parameters": [
+        "self",
+        "now"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "server/models.py",
+      "source_path": "server/models.py",
+      "name": "any_mirror",
+      "kind": "function",
+      "line": 56,
+      "parameters": [
+        "self",
+        "now"
+      ],
+      "summary": "Best available mirror for an ACTIVE recorder \u2014 prefer healthy, but never hard-stop\na live recording just because the prober transiently soured every mirror. The recorder's\nown fetch is the real liveness test, so fall back to the least-bad option."
+    },
+    {
+      "module": "server/models.py",
+      "source_path": "server/models.py",
+      "name": "by_id",
+      "kind": "function",
+      "line": 72,
+      "parameters": [
+        "self",
+        "cid"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "server/models.py",
+      "source_path": "server/models.py",
+      "name": "by_country",
+      "kind": "function",
+      "line": 75,
+      "parameters": [
+        "self",
+        "country"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "server/prober.py",
+      "source_path": "server/prober.py",
+      "name": "_parse_master",
+      "kind": "function",
+      "line": 36,
+      "parameters": [
+        "text"
+      ],
+      "summary": "Return list of variants sorted by bandwidth desc."
+    },
+    {
+      "module": "server/prober.py",
+      "source_path": "server/prober.py",
+      "name": "_parse_media",
+      "kind": "function",
+      "line": 62,
+      "parameters": [
+        "text"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "server/prober.py",
+      "source_path": "server/prober.py",
+      "name": "_parse_fps",
+      "kind": "function",
+      "line": 82,
+      "parameters": [
+        "rate_str"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "server/prober.py",
+      "source_path": "server/prober.py",
+      "name": "_score",
+      "kind": "function",
+      "line": 93,
+      "parameters": [
+        "m",
+        "target_dur",
+        "avg_fetch_ms"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "server/prober.py",
+      "source_path": "server/prober.py",
+      "name": "_fetch_text",
+      "kind": "function",
+      "line": 115,
+      "parameters": [
+        "session",
+        "url",
+        "proxy",
+        "proxy_auth"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "server/prober.py",
+      "source_path": "server/prober.py",
+      "name": "_fetch_bytes",
+      "kind": "function",
+      "line": 129,
+      "parameters": [
+        "session",
+        "url",
+        "max_bytes",
+        "proxy",
+        "proxy_auth"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "server/prober.py",
+      "source_path": "server/prober.py",
+      "name": "_ffprobe_sync",
+      "kind": "function",
+      "line": 144,
+      "parameters": [
+        "path"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "server/prober.py",
+      "source_path": "server/prober.py",
+      "name": "probe_mirror",
+      "kind": "function",
+      "line": 156,
+      "parameters": [
+        "mirror",
+        "session"
+      ],
+      "summary": "Mutates mirror in place with current health state."
+    },
+    {
+      "module": "server/prober.py",
+      "source_path": "server/prober.py",
+      "name": "probe_catalog",
+      "kind": "function",
+      "line": 253,
+      "parameters": [
+        "catalog"
+      ],
+      "summary": "Probe every mirror of every channel, in parallel batches."
+    },
+    {
+      "module": "server/prober.py",
+      "source_path": "server/prober.py",
+      "name": "capture_thumb_via_self",
+      "kind": "function",
+      "line": 266,
+      "parameters": [
+        "channel",
+        "out_path"
+      ],
+      "summary": "Let ffmpeg ingest our own HLS endpoint at 127.0.0.1:8765. It handles GOP + keyframes properly."
+    },
+    {
+      "module": "server/prober.py",
+      "source_path": "server/prober.py",
+      "name": "capture_thumb",
+      "kind": "function",
+      "line": 288,
+      "parameters": [
+        "channel",
+        "mirror",
+        "out_path",
+        "session"
+      ],
+      "summary": "Fetch latest segment of mirror, extract a frame with ffmpeg \u2192 JPEG 640x360."
+    },
+    {
+      "module": "server/prober.py",
+      "source_path": "server/prober.py",
+      "name": "thumb_loop",
+      "kind": "function",
+      "line": 357,
+      "parameters": [
+        "catalog",
+        "thumb_dir"
+      ],
+      "summary": "Every THUMB_INTERVAL seconds, capture a fresh thumbnail for each healthy channel."
+    },
+    {
+      "module": "server/prober.py",
+      "source_path": "server/prober.py",
+      "name": "prober_loop",
+      "kind": "function",
+      "line": 397,
+      "parameters": [
+        "catalog",
+        "snapshot_path"
+      ],
+      "summary": "Run forever: probe + sleep + dump snapshot."
+    },
+    {
+      "module": "server/prober.py",
+      "source_path": "server/prober.py",
+      "name": "worker",
+      "kind": "function",
+      "line": 258,
+      "parameters": [
+        "m"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "server/prober.py",
+      "source_path": "server/prober.py",
+      "name": "worker",
+      "kind": "function",
+      "line": 367,
+      "parameters": [
+        "ch"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "server/proxy.py",
+      "source_path": "server/proxy.py",
+      "name": "b64url_encode",
+      "kind": "function",
+      "line": 22,
+      "parameters": [
+        "s"
+      ],
+      "summary": "Issue an opaque server-owned upstream ticket."
+    },
+    {
+      "module": "server/proxy.py",
+      "source_path": "server/proxy.py",
+      "name": "b64url_decode",
+      "kind": "function",
+      "line": 27,
+      "parameters": [
+        "s"
+      ],
+      "summary": "Resolve only a ticket issued by this server."
+    },
+    {
+      "module": "server/proxy.py",
+      "source_path": "server/proxy.py",
+      "name": "rewrite_master",
+      "kind": "function",
+      "line": 32,
+      "parameters": [
+        "text",
+        "base_url",
+        "channel_id",
+        "mirror_id"
+      ],
+      "summary": "Rewrite #EXT-X-STREAM-INF target lines to point at our /v/ endpoint."
+    },
+    {
+      "module": "server/proxy.py",
+      "source_path": "server/proxy.py",
+      "name": "rewrite_variant",
+      "kind": "function",
+      "line": 66,
+      "parameters": [
+        "text",
+        "base_url",
+        "channel_id",
+        "mirror_id"
+      ],
+      "summary": "Rewrite a media playlist: segment lines + #EXT-X-MAP + #EXT-X-KEY URI."
+    },
+    {
+      "module": "server/proxy.py",
+      "source_path": "server/proxy.py",
+      "name": "webshare_proxy_url",
+      "kind": "function",
+      "line": 103,
+      "parameters": [
+        "country_code"
+      ],
+      "summary": "Returns just the proxy URL (no embedded auth). Pair with webshare_proxy_auth()."
+    },
+    {
+      "module": "server/proxy.py",
+      "source_path": "server/proxy.py",
+      "name": "webshare_proxy_auth",
+      "kind": "function",
+      "line": 112,
+      "parameters": [
+        "country_code"
+      ],
+      "summary": "Returns aiohttp.BasicAuth for the country code, or None if no proxy is set."
+    },
+    {
+      "module": "server/proxy.py",
+      "source_path": "server/proxy.py",
+      "name": "_r",
+      "kind": "function",
+      "line": 53,
+      "parameters": [
+        "m"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "server/proxy.py",
+      "source_path": "server/proxy.py",
+      "name": "_r",
+      "kind": "function",
+      "line": 73,
+      "parameters": [
+        "m"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "server/tickets.py",
+      "source_path": "server/tickets.py",
+      "name": "_Entry",
+      "kind": "class",
+      "line": 14,
+      "parameters": [],
+      "summary": ""
+    },
+    {
+      "module": "server/tickets.py",
+      "source_path": "server/tickets.py",
+      "name": "UrlTickets",
+      "kind": "class",
+      "line": 18,
+      "parameters": [],
+      "summary": ""
+    },
+    {
+      "module": "server/tickets.py",
+      "source_path": "server/tickets.py",
+      "name": "__init__",
+      "kind": "function",
+      "line": 19,
+      "parameters": [
+        "self"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "server/tickets.py",
+      "source_path": "server/tickets.py",
+      "name": "_remove",
+      "kind": "function",
+      "line": 25,
+      "parameters": [
+        "self",
+        "ticket"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "server/tickets.py",
+      "source_path": "server/tickets.py",
+      "name": "issue",
+      "kind": "function",
+      "line": 29,
+      "parameters": [
+        "self",
+        "url"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "server/tickets.py",
+      "source_path": "server/tickets.py",
+      "name": "resolve",
+      "kind": "function",
+      "line": 47,
+      "parameters": [
+        "self",
+        "ticket"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "server/youtube.py",
+      "source_path": "server/youtube.py",
+      "name": "_fetch_rss",
+      "kind": "function",
+      "line": 20,
+      "parameters": [
+        "session",
+        "ucid"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "server/youtube.py",
+      "source_path": "server/youtube.py",
+      "name": "refresh_yt",
+      "kind": "function",
+      "line": 38,
+      "parameters": [
+        "catalog",
+        "session"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "server/youtube.py",
+      "source_path": "server/youtube.py",
+      "name": "yt_loop",
+      "kind": "function",
+      "line": 50,
+      "parameters": [
+        "catalog",
+        "session_factory"
+      ],
+      "summary": "Periodic background refresh of every YouTube channel's recent-video list (~hourly)."
+    },
+    {
+      "module": "server/youtube.py",
+      "source_path": "server/youtube.py",
+      "name": "is_live",
+      "kind": "function",
+      "line": 61,
+      "parameters": [
+        "ch"
+      ],
+      "summary": "A YouTube channel is 'live' if we have something to play: a PL\u2026 playlist, or cached\nRSS video ids. An empty UC channel (RSS unreachable / channel dark) reads as down so a\ndead tile self-removes instead of opening into a black player."
+    },
+    {
+      "module": "server/youtube.py",
+      "source_path": "server/youtube.py",
+      "name": "player_html",
+      "kind": "function",
+      "line": 130,
+      "parameters": [
+        "name",
+        "yt",
+        "video_ids",
+        "muted"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "tools/first-signal.py",
+      "source_path": "tools/first-signal.py",
+      "name": "private_runtime",
+      "kind": "function",
+      "line": 9,
+      "parameters": [],
+      "summary": ""
+    },
+    {
+      "module": "tools/first-signal.py",
+      "source_path": "tools/first-signal.py",
+      "name": "make_signal",
+      "kind": "function",
+      "line": 14,
+      "parameters": [
+        "media"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "tools/first-signal.py",
+      "source_path": "tools/first-signal.py",
+      "name": "QuietMediaHandler",
+      "kind": "class",
+      "line": 24,
+      "parameters": [],
+      "summary": ""
+    },
+    {
+      "module": "tools/first-signal.py",
+      "source_path": "tools/first-signal.py",
+      "name": "get",
+      "kind": "function",
+      "line": 30,
+      "parameters": [
+        "url"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "tools/first-signal.py",
+      "source_path": "tools/first-signal.py",
+      "name": "wait_for",
+      "kind": "function",
+      "line": 34,
+      "parameters": [
+        "check"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "tools/first-signal.py",
+      "source_path": "tools/first-signal.py",
+      "name": "serve_and_prove",
+      "kind": "function",
+      "line": 44,
+      "parameters": [
+        "runtime"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "tools/first-signal.py",
+      "source_path": "tools/first-signal.py",
+      "name": "main",
+      "kind": "function",
+      "line": 132,
+      "parameters": [],
+      "summary": ""
+    },
+    {
+      "module": "tools/first-signal.py",
+      "source_path": "tools/first-signal.py",
+      "name": "log_message",
+      "kind": "function",
+      "line": 25,
+      "parameters": [
+        "self"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "tools/first-signal.py",
+      "source_path": "tools/first-signal.py",
+      "name": "copyfile",
+      "kind": "function",
+      "line": 26,
+      "parameters": [
+        "self",
+        "source",
+        "outputfile"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "tools/first-signal.py",
+      "source_path": "tools/first-signal.py",
+      "name": "checked_connect",
+      "kind": "function",
+      "line": 61,
+      "parameters": [
+        "connection",
+        "address"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "tools/first-signal.py",
+      "source_path": "tools/first-signal.py",
+      "name": "checked_dns",
+      "kind": "function",
+      "line": 66,
+      "parameters": [
+        "host"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "tools/first-signal.py",
+      "source_path": "tools/first-signal.py",
+      "name": "buffered",
+      "kind": "function",
+      "line": 80,
+      "parameters": [],
+      "summary": ""
+    },
+    {
+      "module": "tools/first-signal.py",
+      "source_path": "tools/first-signal.py",
+      "name": "route",
+      "kind": "function",
+      "line": 102,
+      "parameters": [
+        "r"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "tools/link-gate.py",
+      "source_path": "tools/link-gate.py",
+      "name": "targets",
+      "kind": "function",
+      "line": 12,
+      "parameters": [
+        "line"
+      ],
+      "summary": "Every link target on one line, unwrapped and stripped of its title."
+    },
+    {
+      "module": "tools/link-gate.py",
+      "source_path": "tools/link-gate.py",
+      "name": "resolves",
+      "kind": "function",
+      "line": 23,
+      "parameters": [
+        "source",
+        "target"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "tools/link-gate.py",
+      "source_path": "tools/link-gate.py",
+      "name": "main",
+      "kind": "function",
+      "line": 33,
+      "parameters": [],
+      "summary": ""
+    },
+    {
+      "module": "tools/runtime-env.py",
+      "source_path": "tools/runtime-env.py",
+      "name": "ConfigError",
+      "kind": "class",
+      "line": 22,
+      "parameters": [],
+      "summary": ""
+    },
+    {
+      "module": "tools/runtime-env.py",
+      "source_path": "tools/runtime-env.py",
+      "name": "private_path",
+      "kind": "function",
+      "line": 26,
+      "parameters": [
+        "raw"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "tools/runtime-env.py",
+      "source_path": "tools/runtime-env.py",
+      "name": "read_config",
+      "kind": "function",
+      "line": 44,
+      "parameters": [
+        "path"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "tools/runtime-env.py",
+      "source_path": "tools/runtime-env.py",
+      "name": "write_config",
+      "kind": "function",
+      "line": 61,
+      "parameters": [
+        "path",
+        "values"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "tools/runtime-env.py",
+      "source_path": "tools/runtime-env.py",
+      "name": "child_env",
+      "kind": "function",
+      "line": 76,
+      "parameters": [
+        "values",
+        "inherited"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "tools/runtime-env.py",
+      "source_path": "tools/runtime-env.py",
+      "name": "main",
+      "kind": "function",
+      "line": 95,
+      "parameters": [
+        "argv"
+      ],
+      "summary": ""
+    },
+    {
+      "module": "tools/source-reference.py",
+      "source_path": "tools/source-reference.py",
+      "name": "main",
+      "kind": "function",
+      "line": 6,
+      "parameters": [],
+      "summary": ""
+    }
+  ]
+}

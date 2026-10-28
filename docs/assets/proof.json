@@ -1,0 +1,76 @@
+{
+  "python_network_attempts_outside_fixture": 0,
+  "source_pin": "dbac69422281b857b9425ee01bb1876ddbdb7c2c",
+  "media": "Three independently generated local FFmpeg test signals and tones, 20 seconds each.",
+  "actual_stages": [
+    "catalogue load",
+    "real mirror probes",
+    "original master rewrite",
+    "original DVR recorder",
+    "local buffered segment delivery",
+    "unissued proxy-target rejection"
+  ],
+  "buffered_segment_bytes": 469812,
+  "forged_ticket_status": 400,
+  "provider_model_calls": 0,
+  "remote_streams": 0,
+  "runtime": {
+    "fastapi": "0.141.1",
+    "uvicorn": "0.52.4",
+    "aiohttp": "3.14.3",
+    "PyYAML": "6.0.3"
+  },
+  "source_sha256": {
+    "server/main.py": "34aeaf90cd0f8172d4a62de28f4a61391ac50910db813570b95541b9853498e1",
+    "server/proxy.py": "71da64e2a0b80d6d5a505a3ef531d4f7c1d6277b8cee9c9f64efd0fcd03d5240",
+    "server/tickets.py": "3eb510bac261bc64969e4aa84c027492dca243cfda6b4585a17c13dda051258b",
+    "server/dvr.py": "0ef373cc172ef79f78e7af77e3b4607e9c3f11464d370d09a3c5dfe207c9899a",
+    "server/catalog.py": "69a0332a3a0757427103914b85b2ab7c6c351f9390a972b892155f99ddccdac0",
+    "server/prober.py": "6e92495974107b47beba340427bf2aad3429cdb552ac3a46533da6ac7547ba88",
+    "server/web.py": "0d82c2fd597257a60b513f7867e83987c7730ce833fd88468f69d081ddc9f50a",
+    "tools/first-signal.py": "a385eac6d792663facc5b0b7d20dc66e46d739d78f57c4605bd74429ab45047f"
+  },
+  "browser": {
+    "captures": [
+      {
+        "path": "cancha-browse-desktop.png",
+        "scene": "native catalogue",
+        "viewport": {
+          "width": 1600,
+          "height": 1000
+        },
+        "sha256": "66875baaef371cda8d87f47a327f2f9fdc18974a9389182d68812c06b693509e"
+      },
+      {
+        "path": "cancha-signal-desktop.png",
+        "viewport": {
+          "width": 1600,
+          "height": 1000
+        },
+        "decoded_video": true,
+        "sha256": "92f5ffec8341ba0957e0a924506fe7b5e63565a61b694218a873706c8204ebd5"
+      },
+      {
+        "path": "cancha-browse-phone.png",
+        "scene": "native catalogue",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "sha256": "75b854bf94f4bedb4b22de6870effcc38e4008a27b1c0e27dc25907f7abda76a"
+      },
+      {
+        "path": "cancha-signal-phone.png",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "decoded_video": true,
+        "sha256": "d28ed57faad37b16f02d715ef2cb1421076346aaa1ac0b09adca21d997d0e2d7"
+      }
+    ],
+    "foreign_requests": 0,
+    "page_errors": 0,
+    "decoded_local_video": true
+  }
+}

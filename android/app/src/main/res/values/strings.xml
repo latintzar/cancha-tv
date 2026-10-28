@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cancha</string>
+    <string name="loading">cargando…</string>
+    <string name="live">EN VIVO</string>
+    <string name="offline">sin señal</string>
+    <string name="probing">probando…</string>
+    <string name="switching_stream">cambiando de transmisión…</string>
+</resources>

@@ -1,0 +1,41 @@
+# Android build outputs
+android/app/build/
+android/build/
+android/.gradle/
+android/local.properties
+*.apk
+*.aab
+
+# Web
+web/node_modules/
+web/.vercel/
+web/.next/
+
+# Python
+server/__pycache__/
+**/__pycache__/
+*.pyc
+
+# Keystore is needed to sign — keep it, but never the passwords elsewhere
+# (keystore/cancha.jks is intentionally tracked so builds are reproducible)
+
+# Scratch
+*.log
+.DS_Store
+
+.venv/
+.state/
+__pycache__/
+*.pyc
+.env*
+*.env
+*.jks
+*.keystore
+*.p12
+*.pem
+*.apk
+*.aab
+android/local.properties
+android/.gradle/
+android/keystore/
+android/app/build/

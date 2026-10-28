@@ -49,5 +49,11 @@
       "path": "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png",
       "sha256": "eeb446f975ef9a9ed7845215eb8907ee9f56112557e8e8009749ecce48e8141b"
     }
-  ]
+  ],
+  "recovered_recent_store": {
+    "path": "android/app/src/main/kotlin/casa/leo/cancha/data/RecentStore.kt",
+    "sha256": "292f376da99ddc85cca8fa4ecf1e56d2deb92adf6a04ac9530ad21f57e1ad141",
+    "source": "retained original Cancha Android source",
+    "role": "local watch history, favourites and update prompt state"
+  }
 }

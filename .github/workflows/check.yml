@@ -19,7 +19,7 @@ jobs:
       - run: python3 -m pip install playwright==1.62.0
       - run: python3 -m playwright install --with-deps chromium
       - run: python3 tools/first-signal.py --capture /tmp/cancha-native-proof
-      - run: python3 tools/first-signal.py --prefix /apps/cancha --capture /tmp/cancha-prefix-proof
+      - run: python3 tools/first-signal.py --prefix /apps/cancha --sustain 30 --capture /tmp/cancha-prefix-proof
   android-debug:
     runs-on: ubuntu-latest
     steps:

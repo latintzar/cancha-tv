@@ -6,14 +6,14 @@
 |---|---:|---|
 | `private_runtime` | [L9](../../../../tools/first-signal.py#L9) |  |
 | `make_signal` | [L14](../../../../tools/first-signal.py#L14) | media |
-| `QuietMediaHandler` | [L24](../../../../tools/first-signal.py#L24) |  |
-| `get` | [L30](../../../../tools/first-signal.py#L30) | url |
-| `wait_for` | [L34](../../../../tools/first-signal.py#L34) | check |
-| `serve_and_prove` | [L44](../../../../tools/first-signal.py#L44) | runtime |
-| `main` | [L136](../../../../tools/first-signal.py#L136) |  |
-| `log_message` | [L25](../../../../tools/first-signal.py#L25) | self |
-| `copyfile` | [L26](../../../../tools/first-signal.py#L26) | self, source, outputfile |
-| `checked_connect` | [L61](../../../../tools/first-signal.py#L61) | connection, address |
-| `checked_dns` | [L66](../../../../tools/first-signal.py#L66) | host |
-| `buffered` | [L84](../../../../tools/first-signal.py#L84) |  |
-| `route` | [L106](../../../../tools/first-signal.py#L106) | r |
+| `QuietMediaHandler` | [L26](../../../../tools/first-signal.py#L26) |  |
+| `get` | [L32](../../../../tools/first-signal.py#L32) | url |
+| `wait_for` | [L36](../../../../tools/first-signal.py#L36) | check |
+| `serve_and_prove` | [L46](../../../../tools/first-signal.py#L46) | runtime |
+| `main` | [L170](../../../../tools/first-signal.py#L170) |  |
+| `log_message` | [L27](../../../../tools/first-signal.py#L27) | self |
+| `copyfile` | [L28](../../../../tools/first-signal.py#L28) | self, source, outputfile |
+| `checked_connect` | [L80](../../../../tools/first-signal.py#L80) | connection, address |
+| `checked_dns` | [L85](../../../../tools/first-signal.py#L85) | host |
+| `buffered` | [L103](../../../../tools/first-signal.py#L103) |  |
+| `route` | [L134](../../../../tools/first-signal.py#L134) | r |

@@ -18,6 +18,8 @@ def make_signal(media):
         command=['ffmpeg','-hide_banner','-loglevel','error','-f','lavfi','-i',source,'-f','lavfi','-i','sine=frequency=440:sample_rate=48000','-t','20','-c:v','libx264','-threads','1','-preset','ultrafast','-pix_fmt','yuv420p','-g','50','-sc_threshold','0','-c:a','aac','-b:a','64k','-hls_time','2','-hls_list_size','0','-hls_flags','independent_segments','-hls_segment_filename',str(destination/'signal-%03d.ts'),'-f','hls',str(destination/'signal.m3u8')]
         result=subprocess.run(command,stdout=subprocess.DEVNULL,stderr=subprocess.PIPE,timeout=60)
         if result.returncode:raise RuntimeError('Local FFmpeg signal generation failed.')
+        movie=['ffmpeg','-hide_banner','-loglevel','error','-i',str(destination/'signal.m3u8'),'-c','copy',str(destination/'signal.mp4')]
+        if subprocess.run(movie,stdout=subprocess.DEVNULL,stderr=subprocess.PIPE,timeout=20).returncode:raise RuntimeError('Local signal packaging failed.')
         poster=['ffmpeg','-hide_banner','-loglevel','error','-i',str(destination/'signal.m3u8'),'-frames:v','1','-vf','scale=320:180','-threads','1',str(media.parent/'logos'/(channel_id+'.png'))]
         if subprocess.run(poster,stdout=subprocess.DEVNULL,stderr=subprocess.PIPE,timeout=20).returncode:raise RuntimeError('Local signal frame extraction failed.')
 
@@ -41,16 +43,33 @@ def wait_for(check, *, deadline=60):
         time.sleep(0.1)
     raise RuntimeError('The local signal did not reach its readiness barrier.')
 
-def serve_and_prove(runtime, *, serve=False, capture=None, port=0, prefix=''):
+def serve_and_prove(runtime, *, serve=False, capture=None, port=0, prefix='', sustain=0):
     import functools
     sock=socket.socket();sock.setsockopt(socket.SOL_SOCKET,socket.SO_REUSEADDR,1);sock.bind(('127.0.0.1',port));port=sock.getsockname()[1]
     media_server=http.server.ThreadingHTTPServer(('127.0.0.1',0),functools.partial(QuietMediaHandler,directory=str(runtime/'media')))
     media_thread=threading.Thread(target=media_server.serve_forever,daemon=True);media_thread.start()
     feed='http://127.0.0.1:'+str(media_server.server_port)
+    # Repeat the three authored 20-second clips as bounded live HLS; otherwise the
+    # real DVR reaches end-of-stream and the native mirror health marks them offline.
+    producers=[]
+    for name in ('','grid','bars'):
+        source=runtime/'media'/name/'signal.mp4'
+        destination=runtime/'media'/'live'/name
+        destination.mkdir(mode=0o700,parents=True,exist_ok=True)
+        command=['ffmpeg','-hide_banner','-loglevel','error','-stream_loop','-1','-re','-i',str(source),
+                 '-c','copy','-f','hls','-hls_time','2','-hls_list_size','5',
+                 '-hls_flags','delete_segments+omit_endlist','-hls_segment_filename',str(destination/'signal-%03d.ts'),
+                 str(destination/'signal.m3u8')]
+        producers.append(subprocess.Popen(command,stdin=subprocess.DEVNULL,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL))
+    try:
+        wait_for(lambda:all((runtime/'media'/'live'/name/'signal.m3u8').exists() for name in ('','grid','bars')),deadline=30)
+    except Exception:
+        for process in producers:process.terminate()
+        raise
     catalog=runtime/'catalog.yaml'
-    catalog.write_text('channels:\n  - id: local-test-signal\n    name: Cancha test signal\n    country: MX\n    type: Cultura\n    number: 1\n    tags: [authored, local-test]\n    mirrors:\n      - url: '+feed+'/signal.m3u8\n        source: Authored local HLS\n      - url: '+feed+'/unavailable.m3u8\n        source: Authored unavailable-mirror test\n')
+    catalog.write_text('channels:\n  - id: local-test-signal\n    name: Cancha test signal\n    country: MX\n    type: Cultura\n    number: 1\n    tags: [authored, local-test]\n    mirrors:\n      - url: '+feed+'/live/signal.m3u8\n        source: Authored local HLS\n      - url: '+feed+'/unavailable.m3u8\n        source: Authored unavailable-mirror test\n')
     with catalog.open('a') as handle:
-        handle.write('  - id: local-grid-test\n    name: Grid test\n    country: MX\n    type: Cultura\n    number: 2\n    mirrors:\n      - url: '+feed+'/grid/signal.m3u8\n        source: Authored local grid\n  - id: local-bars-test\n    name: Bars test\n    country: PE\n    type: Cultura\n    number: 3\n    mirrors:\n      - url: '+feed+'/bars/signal.m3u8\n        source: Authored local bars\n')
+        handle.write('  - id: local-grid-test\n    name: Grid test\n    country: MX\n    type: Cultura\n    number: 2\n    mirrors:\n      - url: '+feed+'/live/grid/signal.m3u8\n        source: Authored local grid\n  - id: local-bars-test\n    name: Bars test\n    country: PE\n    type: Cultura\n    number: 3\n    mirrors:\n      - url: '+feed+'/live/bars/signal.m3u8\n        source: Authored local bars\n')
     catalog.chmod(0o600)
     # This process uses only its generated local inputs; inherited service accounts stay out.
     for name in list(os.environ):
@@ -95,7 +114,16 @@ def serve_and_prove(runtime, *, serve=False, capture=None, port=0, prefix=''):
         except urllib.error.HTTPError as error:rejected=error.code
         assert rejected==400
         assert not attempts
-        receipt={'python_network_attempts_outside_fixture':0,'source_pin':'dbac69422281b857b9425ee01bb1876ddbdb7c2c','media':'Three independently generated local FFmpeg test signals and tones, 20 seconds each.','actual_stages':['catalogue load','real mirror probes','original master rewrite','original DVR recorder','local buffered segment delivery','unissued proxy-target rejection'],'buffered_segment_bytes':len(segment),'forged_ticket_status':rejected,'provider_model_calls':0,'remote_streams':0,'runtime':{name:importlib.metadata.version(name) for name in ['fastapi','uvicorn','aiohttp','PyYAML']},'source_sha256':{name:hashlib.sha256((ROOT/name).read_bytes()).hexdigest() for name in ['server/main.py','server/proxy.py','server/tickets.py','server/dvr.py','server/catalog.py','server/prober.py','server/web.py','tools/first-signal.py']}}
+        if sustain:
+            deadline=time.monotonic()+sustain
+            while time.monotonic()<deadline:
+                if any(process.poll() is not None for process in producers):raise RuntimeError('A local signal producer stopped.')
+                time.sleep(.5)
+            status=get(base+'/v1/status',json_data=True)
+            assert all(row.get('best_mirror_score',0)>0 for row in status['channels'])
+            playlist=get(base+'/v1/local-test-signal/dvr.m3u8').decode()
+            assert '#EXTINF:' in playlist
+        receipt={'python_network_attempts_outside_fixture':0,'source_pin':'dbac69422281b857b9425ee01bb1876ddbdb7c2c','media':'Three independently generated local FFmpeg test signals and tones, each repeated as bounded live HLS.','actual_stages':['catalogue load','real mirror probes','original master rewrite','original DVR recorder','local buffered segment delivery','unissued proxy-target rejection'],'buffered_segment_bytes':len(segment),'forged_ticket_status':rejected,'provider_model_calls':0,'remote_streams':0,'runtime':{name:importlib.metadata.version(name) for name in ['fastapi','uvicorn','aiohttp','PyYAML']},'source_sha256':{name:hashlib.sha256((ROOT/name).read_bytes()).hexdigest() for name in ['server/main.py','server/proxy.py','server/tickets.py','server/dvr.py','server/catalog.py','server/prober.py','server/web.py','tools/first-signal.py']}}
         if capture:
             from playwright.sync_api import sync_playwright
             output=Path(capture);output.mkdir(parents=True,exist_ok=True);foreign=[];errors=[];shots=[]
@@ -127,15 +155,21 @@ def serve_and_prove(runtime, *, serve=False, capture=None, port=0, prefix=''):
         if serve:
             print('The local player is ready. Press Ctrl-C to stop.',flush=True)
             try:
-                while thread.is_alive():time.sleep(0.5)
+                while thread.is_alive() and all(process.poll() is None for process in producers):time.sleep(0.5)
+                if any(process.poll() is not None for process in producers):raise RuntimeError('A local signal producer stopped.')
             except KeyboardInterrupt:pass
     finally:
+        for process in producers:
+            if process.poll() is None:process.terminate()
+        for process in producers:
+            try:process.wait(timeout=5)
+            except subprocess.TimeoutExpired:process.kill();process.wait()
         server.should_exit=True;thread.join(timeout=15);media_server.shutdown();media_server.server_close();sock.close()
         socket.socket.connect=original_connect;socket.getaddrinfo=original_dns
 
 def main():
-    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--serve',action='store_true');parser.add_argument('--capture');parser.add_argument('--port',type=int,default=0);parser.add_argument('--prefix',default='');args=parser.parse_args()
+    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--serve',action='store_true');parser.add_argument('--capture');parser.add_argument('--port',type=int,default=0);parser.add_argument('--prefix',default='');parser.add_argument('--sustain',type=int,default=0);args=parser.parse_args()
     if not shutil.which('ffmpeg') or not shutil.which('ffprobe'):raise SystemExit('Install FFmpeg and FFprobe to generate and inspect the local signal.')
-    runtime=private_runtime();make_signal(runtime/'media');serve_and_prove(runtime,serve=args.serve,capture=args.capture,port=args.port,prefix=args.prefix)
+    runtime=private_runtime();make_signal(runtime/'media');serve_and_prove(runtime,serve=args.serve,capture=args.capture,port=args.port,prefix=args.prefix,sustain=args.sustain)
 
 if __name__=='__main__':main()

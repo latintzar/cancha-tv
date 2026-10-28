@@ -2095,7 +2095,7 @@
       "source_path": "tools/first-signal.py",
       "name": "QuietMediaHandler",
       "kind": "class",
-      "line": 24,
+      "line": 26,
       "parameters": [],
       "summary": ""
     },
@@ -2104,7 +2104,7 @@
       "source_path": "tools/first-signal.py",
       "name": "get",
       "kind": "function",
-      "line": 30,
+      "line": 32,
       "parameters": [
         "url"
       ],
@@ -2115,7 +2115,7 @@
       "source_path": "tools/first-signal.py",
       "name": "wait_for",
       "kind": "function",
-      "line": 34,
+      "line": 36,
       "parameters": [
         "check"
       ],
@@ -2126,7 +2126,7 @@
       "source_path": "tools/first-signal.py",
       "name": "serve_and_prove",
       "kind": "function",
-      "line": 44,
+      "line": 46,
       "parameters": [
         "runtime"
       ],
@@ -2137,7 +2137,7 @@
       "source_path": "tools/first-signal.py",
       "name": "main",
       "kind": "function",
-      "line": 136,
+      "line": 170,
       "parameters": [],
       "summary": ""
     },
@@ -2146,7 +2146,7 @@
       "source_path": "tools/first-signal.py",
       "name": "log_message",
       "kind": "function",
-      "line": 25,
+      "line": 27,
       "parameters": [
         "self"
       ],
@@ -2157,7 +2157,7 @@
       "source_path": "tools/first-signal.py",
       "name": "copyfile",
       "kind": "function",
-      "line": 26,
+      "line": 28,
       "parameters": [
         "self",
         "source",
@@ -2170,7 +2170,7 @@
       "source_path": "tools/first-signal.py",
       "name": "checked_connect",
       "kind": "function",
-      "line": 61,
+      "line": 80,
       "parameters": [
         "connection",
         "address"
@@ -2182,7 +2182,7 @@
       "source_path": "tools/first-signal.py",
       "name": "checked_dns",
       "kind": "function",
-      "line": 66,
+      "line": 85,
       "parameters": [
         "host"
       ],
@@ -2193,7 +2193,7 @@
       "source_path": "tools/first-signal.py",
       "name": "buffered",
       "kind": "function",
-      "line": 84,
+      "line": 103,
       "parameters": [],
       "summary": ""
     },
@@ -2202,7 +2202,7 @@
       "source_path": "tools/first-signal.py",
       "name": "route",
       "kind": "function",
-      "line": 106,
+      "line": 134,
       "parameters": [
         "r"
       ],

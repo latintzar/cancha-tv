@@ -1,0 +1,71 @@
+name: Android TV native capture
+on:
+  push:
+    branches: [capture/android-tv]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+        with:
+          distribution: temurin
+          java-version: '17'
+      - run: python3 -m pip install -r server/requirements.txt
+      - run: sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends ffmpeg
+      - name: Build native Android TV app against its local proof server
+        working-directory: android
+        run: bash ./gradlew :app:assembleDebug -PcanchaBaseUrl=http://10.0.2.2:8765
+      - name: Enable KVM
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+      - name: Run actual app on Android TV with three authored signals
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 34
+          target: android-tv
+          arch: x86_64
+          profile: tv_1080p
+          disable-animations: false
+          script: |
+            set -eu
+            python3 tools/first-signal.py --serve --port 8765 > /tmp/cancha-proof.log 2>&1 &
+            backend=$!
+            trap 'kill "$backend" 2>/dev/null || true' EXIT
+            for i in $(seq 1 90); do curl -fsS http://127.0.0.1:8765/v1/status >/dev/null && break; sleep 1; done
+            curl -fsS http://127.0.0.1:8765/v1/status >/dev/null
+            adb install android/app/build/outputs/apk/debug/app-debug.apk
+            adb shell am start -n casa.leo.cancha.debug/casa.leo.cancha.MainActivity
+            sleep 12
+            adb shell pidof casa.leo.cancha.debug
+            mkdir -p capture
+            adb exec-out screencap -p > capture/tv-guide.png
+            adb shell input keyevent KEYCODE_DPAD_CENTER
+            sleep 12
+            adb exec-out screencap -p > capture/tv-playing.png
+            adb shell screenrecord --time-limit 8 /sdcard/cancha.mp4 &
+            recording=$!
+            sleep 2
+            adb shell input keyevent KEYCODE_DPAD_DOWN
+            sleep 2
+            adb shell input keyevent KEYCODE_DPAD_UP
+            wait "$recording"
+            adb pull /sdcard/cancha.mp4 capture/tv-loop.mp4
+            adb shell uiautomator dump /sdcard/window.xml >/dev/null
+            adb pull /sdcard/window.xml capture/window.xml
+            cp /tmp/cancha-proof.log capture/backend.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: cancha-android-tv-proof
+          path: capture/
+          if-no-files-found: warn

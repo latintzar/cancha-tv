@@ -24,4 +24,4 @@ Channel guide → Healthy stream selection → Live playback → Buffered rewind
 
 The Android TV source builds and has been exercised in an emulator. The hosted web companion uses authored HLS test signals. Channel metadata, feed availability and viewing rights belong to each installation. Build for your Android TV and configure the channels you are entitled to receive.
 
-Source: [docs/architecture.md](../docs/architecture.md), [docs/setup.md](../docs/setup.md), [docs/verification.md](../docs/verification.md).
+Source: [docs/architecture.md](../docs/architecture.md), [docs/setup.md](../docs/setup.md).

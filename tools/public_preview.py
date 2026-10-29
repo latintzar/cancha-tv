@@ -20,7 +20,7 @@ class PublicPreview:
         elif path.startswith(self.prefix+'/'):path=path[len(self.prefix):]
         else:return await self.reject(send,404)
         channel='|'.join(CHANNELS)
-        get_allowed=(path in ('/','/watch','/v1/status','/favicon.ico') or
+        get_allowed=(path in ("/native-nav/atelier-nav.js","/native-nav/atelier-nav.css","/native-nav/atelier-inset.css", '/','/watch','/v1/status','/favicon.ico') or
             re.fullmatch(r'/(?:brand|webfont|vendor|flag|logo|thumb)/[^/]+',path) or
             re.fullmatch(r'/v1/(?:'+channel+r')/(?:master\.m3u8|dvr\.m3u8|dvr/status|dvrseg/[^/]+|[^/]+/[vs]/[^/]+)',path))
         warm_allowed=method=='POST' and re.fullmatch(r'/v1/(?:'+channel+r')/warm',path)

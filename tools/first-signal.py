@@ -74,7 +74,7 @@ def serve_and_prove(runtime, *, serve=False, capture=None, port=0, prefix='', su
     # This process uses only its generated local inputs; inherited service accounts stay out.
     for name in list(os.environ):
         if any(part in name.upper() for part in ['KEY','TOKEN','SECRET','PASSWORD','WEBSHARE']) or name.upper().endswith('_PROXY'):os.environ.pop(name,None)
-    os.environ.update({'CANCHA_CATALOG':str(catalog),'CANCHA_LOGO_DIR':str(runtime/'logos'),'CANCHA_HOST':'127.0.0.1','CANCHA_PORT':str(port),'CANCHA_STATE_DIR':str(runtime/'state'),'CANCHA_DVR_DIR':str(runtime/'state/dvr'),'CANCHA_THUMB_DIR':str(runtime/'state/thumbs'),'CANCHA_SNAPSHOT':str(runtime/'state/snapshot.json'),'CANCHA_ENABLE_PROXY':'0','CANCHA_MAX_TRANSCODE':'1'})
+    os.environ.update({'CANCHA_ATELIER_NAV':'1','CANCHA_CATALOG':str(catalog),'CANCHA_LOGO_DIR':str(runtime/'logos'),'CANCHA_HOST':'127.0.0.1','CANCHA_PORT':str(port),'CANCHA_STATE_DIR':str(runtime/'state'),'CANCHA_DVR_DIR':str(runtime/'state/dvr'),'CANCHA_THUMB_DIR':str(runtime/'state/thumbs'),'CANCHA_SNAPSHOT':str(runtime/'state/snapshot.json'),'CANCHA_ENABLE_PROXY':'0','CANCHA_MAX_TRANSCODE':'1'})
     attempts=[];allowed_ports={port,media_server.server_port}
     original_connect=socket.socket.connect;original_dns=socket.getaddrinfo
     def checked_connect(connection,address):

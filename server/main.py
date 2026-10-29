@@ -20,7 +20,7 @@ from urllib.parse import urljoin
 
 import aiohttp
 from fastapi import FastAPI, HTTPException, Request, Response
-from fastapi.responses import PlainTextResponse, JSONResponse, StreamingResponse, RedirectResponse, HTMLResponse
+from fastapi.responses import PlainTextResponse, JSONResponse, StreamingResponse, RedirectResponse, HTMLResponse, FileResponse
 
 from .catalog import load_catalog, CATALOG_PATH, LOGO_DIR
 from .models import Catalog, Channel, Mirror
@@ -121,7 +121,21 @@ async def root_redirect():
 
 @app.get("/watch", response_class=Response)
 async def watch_page():
-    return Response(content=INDEX_HTML, media_type="text/html; charset=utf-8")
+    html = INDEX_HTML
+    if os.environ.get("CANCHA_ATELIER_NAV") == "1":
+        import re
+        tag = '<link rel="stylesheet" href="./native-nav/atelier-inset.css"><script defer src="./native-nav/atelier-nav.js" data-project="cancha"></script>'
+        html = html.replace("</head>", tag + "</head>", 1)
+        html = re.sub(r"(<body\b[^>]*>)", lambda m: m.group(1) + '<div id="atelier-native-app">', html, count=1, flags=re.I)
+        html = re.sub(r"</body>", "</div></body>", html, count=1, flags=re.I)
+    return Response(content=html, media_type="text/html; charset=utf-8")
+
+
+@app.get("/native-nav/{name}")
+async def atelier_nav_asset(name: str):
+    if os.environ.get("CANCHA_ATELIER_NAV") != "1" or name not in {"atelier-nav.js", "atelier-nav.css", "atelier-inset.css"}:
+        raise HTTPException(404)
+    return FileResponse(os.path.join(os.path.dirname(__file__), "..", "web", "native-nav", name))
 
 
 @app.get("/yt/{channel_id}", response_class=HTMLResponse)

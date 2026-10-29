@@ -2,9 +2,22 @@
 
 Cancha is an Android TV app for streaming free Latin American internet TV during the 2026 World Cup. Its channel guide, mirror selection and rolling HLS buffer support live playback and rewind. The Android TV app and companion web player share the same backend.
 
-[Website](https://atelierneyra.com/cancha) · [Open app](https://preview.atelierneyra.com/?project=cancha) · [Documentation](https://docs.atelierneyra.com/cancha/overview/)
+[Website](https://atelierneyra.com/cancha) · [Open app](https://preview.atelierneyra.com/apps/cancha/watch) · [Documentation](https://docs.atelierneyra.com/cancha/overview/)
 
 ![Cancha Android TV channel guide with authored local test signals](docs/assets/readme-hero.png)
+
+## How it works
+
+Internet channels have different streams and mirrors. Watching them on a television needs a usable channel guide, healthy feed selection and playback that can recover or rewind.
+
+| Feature | What it does |
+| --- | --- |
+| Android TV guide | Browse channels through the original native television interface. |
+| HLS feed selection | Probe mirrors and select a healthy feed. |
+| Playback and rewind | Play the current feed and its rolling DVR buffer. |
+| Companion web player | Use the same channel service from a browser. |
+
+The Android TV source builds and has been exercised in an emulator. The hosted web companion uses authored HLS test signals. Channel metadata, feed availability and viewing rights belong to each installation. Build for your Android TV and configure the channels you are entitled to receive. [Product guide](docs/PROJECT.md).
 
 ## First result
 

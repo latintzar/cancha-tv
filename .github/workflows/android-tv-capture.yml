@@ -31,9 +31,9 @@ jobs:
       - name: Run actual app on Android TV with three authored signals
         uses: reactivecircus/android-emulator-runner@v2
         with:
-          api-level: 34
+          api-level: 33
           target: android-tv
-          arch: x86_64
+          arch: x86
           profile: tv_1080p
           disable-animations: false
           script: |

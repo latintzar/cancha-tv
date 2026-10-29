@@ -2,7 +2,7 @@
 
 Cancha is an Android TV app for streaming free Latin American internet TV during the 2026 World Cup. Its channel guide, mirror selection and rolling HLS buffer support live playback and rewind. The Android TV app and companion web player share the same backend.
 
-![Cancha’s original channel guide with authored local signals](docs/assets/cancha-browse-desktop.png)
+![Cancha Android TV channel guide with authored local test signals](docs/assets/readme-hero.png)
 
 ## First result
 

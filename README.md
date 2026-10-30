@@ -6,7 +6,7 @@ Cancha is an Android TV app for streaming free Latin American internet TV during
 
 [Website](https://atelierneyra.com/cancha) · [Open app](https://preview.atelierneyra.com/apps/cancha/watch) · [Documentation](https://docs.atelierneyra.com/cancha/overview/)
 
-![Cancha](https://atelierneyra.com/assets/product-motion-v3/cancha.jpg)
+![Cancha](https://atelierneyra.com/assets/product-motion-v4/cancha.jpg)
 
 ## How it works
 

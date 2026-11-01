@@ -87,8 +87,8 @@ def rewrite_variant(text: str, base_url: str, channel_id: str, mirror_id: str) -
 # Webshare residential backconnect format:
 #   http://<USER>-CC-<COUNTRY>:<PASS>@<HOST>:<PORT>
 # Single env config:
-#   WEBSHARE_PROXY_USER = sgxrlffh
-#   WEBSHARE_PROXY_PASS = wn93fwszoeku
+#   WEBSHARE_PROXY_USER = <your-webshare-username>
+#   WEBSHARE_PROXY_PASS = <your-webshare-password>
 #   WEBSHARE_PROXY_HOST = p.webshare.io
 #   WEBSHARE_PROXY_PORT = 80
 # Country: 2-letter ISO (MX, PE, CO, AR, ES, ...). If not set or unavailable, returns None

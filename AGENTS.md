@@ -1,6 +1,6 @@
-# Agent setup
+# Cancha engineering
 
-Read README.md, docs/setup.md and RELEASE-STATUS.md. The source contains Cancha’s actual web, FastAPI and Android TV implementations.
+Read README.md, docs/product-tour.md, docs/setup.md and RELEASE-STATUS.md. The source contains Cancha’s actual web, FastAPI and Android TV implementations.
 
 1. Run the authored local signal before configuring external sources. It needs Python, the listed packages and CPU FFmpeg/FFprobe; provider accounts are separate.
 2. Keep catalogues, stream credentials, DVR output and signing material outside the checkout. Use recipient-owned HLS sources and independently licensed media.

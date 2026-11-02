@@ -11,6 +11,8 @@ Internet channels have different streams and mirrors. Watching them on a televis
 | Playback and rewind | Play the current feed and its rolling DVR buffer. |
 | Companion web player | Use the same channel service from a browser. |
 
+[Product tour](product-tour.md) follows remote navigation, mirror selection, playback and rewind, with the implementing modules.
+
 ## Workflow
 
 Channel guide → Healthy stream selection → Live playback → Buffered rewind

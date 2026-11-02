@@ -4,22 +4,30 @@ An Android TV app to watch free Latin American TV
 
 Cancha is an Android TV app for streaming free Latin American internet TV during the 2026 World Cup. Its channel guide, mirror selection and rolling HLS buffer support live playback and rewind. The Android TV app and companion web player share the same backend.
 
-[Website](https://atelierneyra.com/cancha) · [Open app](https://preview.atelierneyra.com/apps/cancha/watch) · [Documentation](https://docs.atelierneyra.com/cancha/overview/)
+[Website](https://atelierneyra.com/cancha) · [Open demo](https://preview.atelierneyra.com/apps/cancha/watch) · [Product tour](docs/product-tour.md) · [Documentation](https://docs.atelierneyra.com/cancha/overview/)
 
-![Cancha](https://atelierneyra.com/assets/product-motion-v5/cancha-a346548642fd.jpg)
+[![Cancha browser guide with Mexican, Peruvian and Colombian channel thumbnails](https://atelierneyra.com/assets/product-motion-v5/cancha-a346548642fd.jpg)](https://preview.atelierneyra.com/apps/cancha/watch)
 
-## How it works
+## Choose a channel, rewind, return to live
 
-Internet channels have different streams and mirrors. Watching them on a television needs a usable channel guide, healthy feed selection and playback that can recover or rewind.
+1. **Browse the TV guide.** Use the remote to explore channels by country or type, with thumbnails and recent choices.
+2. **Open a channel.** The backend selects a healthy configured HLS mirror. The TV client can prewarm the focused or likely next channel.
+3. **Watch and rewind.** Channel keys change the feed; seek controls use the available rolling recording.
+4. **Return to live or the guide.** The Android TV player and companion browser use the same channel and DVR backend.
 
-| Feature | What it does |
+## Product areas
+
+| Area | What it does |
 | --- | --- |
-| Android TV guide | Browse channels through the original native television interface. |
-| HLS feed selection | Probe mirrors and select a healthy feed. |
-| Playback and rewind | Play the current feed and its rolling DVR buffer. |
-| Companion web player | Use the same channel service from a browser. |
+| Android TV guide | Present remote-navigable channel rails, filters, thumbnails and recents. |
+| Media3 player | Play, change channel, seek and return to live; reuse prebuffered streams where available. |
+| Mirror health | Probe HLS feeds and apply selection/cooldown rules. |
+| DVR | Record and prune a bounded per-channel segment ring on demand. |
+| Web companion | Use the same guide and playback service from a browser. |
 
-The Android TV source builds and has been exercised in an emulator. The hosted web companion uses authored HLS test signals. Channel metadata, feed availability and viewing rights belong to each installation. Build for your Android TV and configure the channels you are entitled to receive. [Product guide](docs/PROJECT.md).
+The Android source builds and has emulator evidence. The hosted web companion uses three authored HLS test signals; your authorized channels and physical TV/remote acceptance belong to your installation.
+
+[Product tour](docs/product-tour.md) follows the viewer’s experience and maps the native guide, player and backend modules.
 
 ## First result
 
@@ -40,6 +48,7 @@ The example supplies three authored 20-second signals. Your own authorized catal
 
 ## Build with it
 
+- [Product tour](docs/product-tour.md): the viewer journey, features and module map.
 - [Guide](docs/guide.md): first playback, channels and Android TV.
 - [Setup](docs/setup.md): private catalogue, optional proxy and signing.
 - [Architecture](docs/architecture.md): actual requests, buffering and playback.
